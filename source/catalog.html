@@ -1,251 +1,219 @@
-<!DOCTYPE html>
-<html class="page" lang="ru">
+{% set pageId = 1 %}
+{% set permalink = pages[pageId].path %}
+{% extends "./templates/_layout.twig" %}
 
-<head>
-	<meta charset="UTF-8">
-	<title>CAT ENERGY</title>
-</head>
-
-<body class="page__body">
-	<header class="page-header">
-		<a class="page-header__logo" href="index.html">
-			<img class="page-header__logo-img" src="http://placekitten.com/70/60" alt="Логотип Cat Energy." width="70" height="60">
-			<img class="page-header__logo-text logo-text" src="http://placekitten.com/117/21" alt="Cat Energy." width="117" height="21">
-		</a>
-		<nav class="main-nav">
-			<button class="main-nav__toggle main-nav__toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
-			<ul class="main-nav__list site-list">
-				<li class="site-list__item site-list__item">
-					<a href="index.html">
-						Главная
-					</a>
-				</li>
-				<li class="site-list__item site-list__item--current">
-					<a href="catalog.html" aria-current="page">
-						Каталог продукции
-					</a>
-				</li>
-				<li class="site-list__item">
-					<a href="form.html">
-						Подбор продукции
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-	<main class="main-container">
-		<section class="catalog">
-			<h1>Каталог продукции</h1>
-			<ul class="catalog__card-list">
-				<li class="catalog__card-item product-card">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO
-							500 г</h3>
-						<img class="product-card__img" src="http://placekitten.com/140/112" alt="#">
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Курица</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">700 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-
-				</li>
-				<li class="catalog__card-item product-card">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO
-							1000 г</h3>
-						<img class="product-card__img" src="http://placekitten.com/140/112" alt="#">
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">1000 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Курица</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">1000 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-
-				</li>
-				<li class="catalog__card-item product-card">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO
-							500 г</h3>
-						<img class="product-card__img" src="http://placekitten.com/140/112" alt="#">
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Рыба</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">700 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-
-				</li>
-				<li class="catalog__card-item product-card">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO
-							1000 г</h3>
-						<img class="product-card__img" src="http://placekitten.com/140/112" alt="#">
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">1000 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Рыба</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">1000 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-
-				</li>
-				<li class="catalog__card-item product-card">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy slim
-							500 г</h3>
-						<img class="product-card__img" src="http://placekitten.com/140/112" alt="#">
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Гречка</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">400 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-
-				</li>
-				<li class="catalog__card-item product-card">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy slim
-							1000 г</h3>
-						<img class="product-card__img" src="http://placekitten.com/140/112" alt="#">
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">1000 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Гречка</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">700 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-
-				</li>
-				<li class="catalog__card-item product-card">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy slim
-							500 г</h3>
-						<img class="product-card__img" src="http://placekitten.com/140/112" alt="#">
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Рис</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">500 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-
-				</li>
-				<li class="catalog__card-show-more">
-					<h3 class="catalog__card-show-more-label">Показать еще
-						100500 товаров</h3>
-					<p class="catalog__card-show-more-description">На самом деле вкусов
-						гораздо больше!</p>
-					<a class="catalog__card-show-more-button" aria-current="page" href="catalog.html">Показать все</a>
-				</li>
-			</ul>
-		</section>
-		<section class="additional-catalog">
-			<h2 class="additional-catalog__label">Дополнительные товары</h2>
-			<ul class="additional-catalog__list">
-				<li class="additional-catalog__item additional-product-card">
-					<h3 class="additional-product-card__label">Сахарозаменитель</h3>
-					<p class="additional-product-card__quantity">1 упаковка (100 г)</p>
-					<p class="additional-product-card__price">200 ₽</p>
-					<button class="additional-product-card__button button">Заказать</button>
-				</li>
-				<li class="additional-catalog__item additional-product-card">
-					<h3 class="additional-product-card__label">Питьевая вода</h3>
-					<p class="additional-product-card__quantity">5 литров</p>
-					<p class="additional-product-card__price">50 ₽</p>
-					<button class="additional-product-card__button button">Заказать</button>
-				</li>
-				<li class="additional-catalog__item additional-product-card">
-					<h3 class="additional-product-card__label">Молоко</h3>
-					<p class="additional-product-card__quantity">1 литр</p>
-					<p class="additional-product-card__price">100 ₽</p>
-					<button class="additional-product-card__button button">Заказать</button>
-				</li>
-				<li class="additional-catalog__item additional-product-card">
-					<h3 class="additional-product-card__label">Витамины</h3>
-					<p class="additional-product-card__quantity">1 упаковка (30 г)</p>
-					<p class="additional-product-card__price">300 ₽</p>
-					<button class="additional-product-card__button button">Заказать</button>
-				</li>
-			</ul>
-			<article class="promotion">
-				<h3 class="visually-hidden">Промоакция</h3>
-				<p class="promotion__description">Закажите все
-					и получите чехол для
-					кота в подарок!</p>
-			</article>
-		</section>
-		<section class="cooperation">
-			<h2 class="cooperation__title">Приглашаем
-				к сотрудничеству
-				дилеров!</h2>
-			<p class="cooperation__adress-street">ул. Большая
-				Конюшенная, д. 19/8</p>
-			<p class="cooperation__adress-city">Санкт-Петербург</p>
-			<div class="cooperation__adress-map map">
-				<img class="map__image" src="http://placekitten.com/320/362" alt="#">
-			</div>
-		</section>
-	</main>
-	<footer class="main-footer">
-		<div class="main-footer__wrapper">
-			<div class="main-footer__logo">
-				<a class="main-footer__logo-link" href="index.html">
-					<img class="logo-text" src="http://placekitten.com/128/24" alt="Cat Energy." width="128" height="24">
+{% block main %}
+<main class="main-container">
+	<section class="catalog">
+		<h1>Каталог продукции</h1>
+		<ul class="catalog__card-list">
+			<li class="catalog__card-item product-card">
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO
+						500 г</h3>
+					<img class="product-card__img" src="http://placekitten.com/140/112" alt="">
 				</a>
-			</div>
-			<div class="main-footer__social">
-				<h2 class="visually-hidden">Социальные Сети Кэт Энержи</h2>
-				<ul class="main-footer__social-list">
-					<li class="main-footer__social-item">
-						<h3 class="visually-hidden">Вконтакте</h3>
-						<a class="main-footer__social-item-vk" href="#">
-						</a>
-					</li>
-					<li class="main-footer__social-item">
-						<h3 class="visually-hidden">YouTube</h3>
-						<a class="main-footer__social-item-youtube" href="#">
-						</a>
-					</li>
-					<li class="main-footer__social-item">
-						<h3 class="visually-hidden">Телеграм</h3>
-						<a class="main-footer__social-item-telegram" href="#">
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="main-footer__copyright">
-				<a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-					<h2 class="main-footer__copyright-title">HTML Academy</h2>
-					<img class="main-footer__copyright-logo-img" src="http://placekitten.com/27/34" alt="Логотип HTML Academy.">
+				<div class="product-card__description">
+					<p class="product-card__description-item">Масса</p>
+					<p class="product-card__description-value">500 г</p>
+					<p class="product-card__description-item">Вкус</p>
+					<p class="product-card__description-value">Курица</p>
+					<p class="product-card__description-item">Цена</p>
+					<p class="product-card__description-value">700 ₽</p>
+				</div>
+				<a class="product-card__button button" href="#">Заказать</a>
+
+			</li>
+			<li class="catalog__card-item product-card">
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO
+						1000 г</h3>
+					<img class="product-card__img" src="http://placekitten.com/140/112" alt="">
 				</a>
-			</div>
+				<div class="product-card__description">
+					<p class="product-card__description-item">Масса</p>
+					<p class="product-card__description-value">1000 г</p>
+					<p class="product-card__description-item">Вкус</p>
+					<p class="product-card__description-value">Курица</p>
+					<p class="product-card__description-item">Цена</p>
+					<p class="product-card__description-value">1000 ₽</p>
+				</div>
+				<a class="product-card__button button" href="#">Заказать</a>
+
+			</li>
+			<li class="catalog__card-item product-card">
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO
+						500 г</h3>
+					<img class="product-card__img" src="http://placekitten.com/140/112" alt="">
+				</a>
+				<div class="product-card__description">
+					<p class="product-card__description-item">Масса</p>
+					<p class="product-card__description-value">500 г</p>
+					<p class="product-card__description-item">Вкус</p>
+					<p class="product-card__description-value">Рыба</p>
+					<p class="product-card__description-item">Цена</p>
+					<p class="product-card__description-value">700 ₽</p>
+				</div>
+				<a class="product-card__button button" href="#">Заказать</a>
+
+			</li>
+			<li class="catalog__card-item product-card">
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO
+						1000 г</h3>
+					<img class="product-card__img" src="http://placekitten.com/140/112" alt="">
+				</a>
+				<div class="product-card__description">
+					<p class="product-card__description-item">Масса</p>
+					<p class="product-card__description-value">1000 г</p>
+					<p class="product-card__description-item">Вкус</p>
+					<p class="product-card__description-value">Рыба</p>
+					<p class="product-card__description-item">Цена</p>
+					<p class="product-card__description-value">1000 ₽</p>
+				</div>
+				<a class="product-card__button button" href="#">Заказать</a>
+
+			</li>
+			<li class="catalog__card-item product-card">
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy slim
+						500 г</h3>
+					<img class="product-card__img" src="http://placekitten.com/140/112" alt="">
+				</a>
+				<div class="product-card__description">
+					<p class="product-card__description-item">Масса</p>
+					<p class="product-card__description-value">500 г</p>
+					<p class="product-card__description-item">Вкус</p>
+					<p class="product-card__description-value">Гречка</p>
+					<p class="product-card__description-item">Цена</p>
+					<p class="product-card__description-value">400 ₽</p>
+				</div>
+				<a class="product-card__button button" href="#">Заказать</a>
+
+			</li>
+			<li class="catalog__card-item product-card">
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy slim
+						1000 г</h3>
+					<img class="product-card__img" src="http://placekitten.com/140/112" alt="">
+				</a>
+				<div class="product-card__description">
+					<p class="product-card__description-item">Масса</p>
+					<p class="product-card__description-value">1000 г</p>
+					<p class="product-card__description-item">Вкус</p>
+					<p class="product-card__description-value">Гречка</p>
+					<p class="product-card__description-item">Цена</p>
+					<p class="product-card__description-value">700 ₽</p>
+				</div>
+				<a class="product-card__button button" href="#">Заказать</a>
+
+			</li>
+			<li class="catalog__card-item product-card">
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy slim
+						500 г</h3>
+					<img class="product-card__img" src="http://placekitten.com/140/112" alt="">
+				</a>
+				<div class="product-card__description">
+					<p class="product-card__description-item">Масса</p>
+					<p class="product-card__description-value">500 г</p>
+					<p class="product-card__description-item">Вкус</p>
+					<p class="product-card__description-value">Рис</p>
+					<p class="product-card__description-item">Цена</p>
+					<p class="product-card__description-value">500 ₽</p>
+				</div>
+				<a class="product-card__button button" href="#">Заказать</a>
+
+			</li>
+			<li class="catalog__card-show-more">
+				<h3 class="catalog__card-show-more-label">Показать еще
+					100500 товаров</h3>
+				<p class="catalog__card-show-more-description">На самом деле вкусов
+					гораздо больше!</p>
+				<a class="catalog__card-show-more-button" aria-current="page" href="catalog.html">Показать все</a>
+			</li>
+		</ul>
+	</section>
+	<section class="additional-catalog">
+		<h2 class="additional-catalog__label">Дополнительные товары</h2>
+		<ul class="additional-catalog__list">
+			<li class="additional-catalog__item additional-product-card">
+				<h3 class="additional-product-card__label">Сахарозаменитель</h3>
+				<p class="additional-product-card__quantity">1 упаковка (100 г)</p>
+				<p class="additional-product-card__price">200 ₽</p>
+				<a class="additional-product-card__button button" href="#">Заказать</a>
+			</li>
+			<li class="additional-catalog__item additional-product-card">
+				<h3 class="additional-product-card__label">Питьевая вода</h3>
+				<p class="additional-product-card__quantity">5 литров</p>
+				<p class="additional-product-card__price">50 ₽</p>
+				<a class="additional-product-card__button button" href="#">Заказать</a>
+			</li>
+			<li class="additional-catalog__item additional-product-card">
+				<h3 class="additional-product-card__label">Молоко</h3>
+				<p class="additional-product-card__quantity">1 литр</p>
+				<p class="additional-product-card__price">100 ₽</p>
+				<a class="additional-product-card__button button" href="#">Заказать</a>
+			</li>
+			<li class="additional-catalog__item additional-product-card">
+				<h3 class="additional-product-card__label">Витамины</h3>
+				<p class="additional-product-card__quantity">1 упаковка (30 г)</p>
+				<p class="additional-product-card__price">300 ₽</p>
+				<a class="additional-product-card__button button" href="#">Заказать</a>
+			</li>
+		</ul>
+		<article class="promotion">
+			<h3 class="visually-hidden">Промоакция</h3>
+			<p class="promotion__description">Закажите все
+				и получите чехол для
+				кота в подарок!</p>
+		</article>
+	</section>
+	<section class="cooperation">
+		<h2 class="cooperation__title">Приглашаем
+			к сотрудничеству
+			дилеров!</h2>
+		<p class="cooperation__adress-street">ул. Большая
+			Конюшенная, д. 19/8</p>
+		<p class="cooperation__adress-city">Санкт-Петербург</p>
+		<div class="cooperation__adress-map map">
+			<img class="map__image" src="http://placekitten.com/320/362" alt="#">
 		</div>
-	</footer>
+	</section>
+</main>
+{% endblock %}
+<footer class="main-footer">
+	<div class="main-footer__wrapper">
+		<div class="main-footer__logo">
+			<a class="main-footer__logo-link" href="index.html">
+				<img class="logo-text" src="http://placekitten.com/128/24" alt="Cat Energy." width="128" height="24">
+			</a>
+		</div>
+		<div class="main-footer__social">
+			<h2 class="visually-hidden">Социальные Сети Кэт Энержи</h2>
+			<ul class="main-footer__social-list">
+				<li class="main-footer__social-item">
+					<a class="main-footer__social-item-vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконтакте</span>
+					</a>
+				</li>
+				<li class="main-footer__social-item">
+
+					<a class="main-footer__social-item-youtube" href="https://youtube.com/user/htmlacademyru"><span class="visually-hidden">YouTube</span>
+					</a>
+				</li>
+				<li class="main-footer__social-item">
+
+					<a class="main-footer__social-item-telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main-footer__copyright copyright">
+			<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+				<span class="visually-hidden">Разработано в</span>HTML Academy
+			</a>
+		</div>
+	</div>
+</footer>
 </body>

@@ -1,152 +1,86 @@
-<!DOCTYPE html>
-<html class="page" lang="ru">
+{% set pageId = 1 %}
+{% set permalink = pages[pageId].path %}
+{% extends "./templates/_layout.twig" %}
 
-<head>
-	<meta charset="UTF-8">
-	<title>CAT ENERGY</title>
-</head>
-
-<body class="page__body">
-	<header class="page-header">
-		<a class="page-header__logo" href="index.html">
-			<img class="page-header__logo-img" src="http://placekitten.com/70/60" alt="Логотип Cat Energy." width="70" height="60">
-			<img class="page-header__logo-text logo-text" src="http://placekitten.com/117/21" alt="Cat Energy." width="117" height="21">
-		</a>
-		<nav class="main-nav">
-			<button class="main-nav__toggle main-nav__toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
-			<ul class="main-nav__list site-list">
-				<li class="site-list__item site-list__item">
-					<a href="index.html">
-						Главная
-					</a>
+{% block main %}
+<main class="main-container">
+	<h1 class="form-title">Подбор программы</h1>
+	<p class="form-description">Заполните анкету, и мы подберем
+		программу питания для вашего кота</p>
+	<form class="page-form" action="https://echo.htmlacademy.ru/" method="get">
+		<fieldset class="cat-information">
+			<legend class="visually-hidden">Информация о вашем коте</legend>
+			<label class="cat-information__label label" for="cat-name">Имя:<span aria-hidden="true">*</span></label>
+			<input class="cat-information__field field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
+			<label class="cat-information__label label" for="cat-weight">Вес (кг):<span aria-hidden="true">*</span></label>
+			<input class="cat-information__field field" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
+			<label class="cat-information__label label" for="cat-age">Возраст (лет):</label>
+			<input class="cat-information__field field" id="cat-age" name="cat-age" type="number" placeholder="7">
+		</fieldset>
+		<fieldset class="programm-goal">
+			<legend class="visually-hidden">Цель программы</legend>
+			<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="lose weight" checked>Похудение
+			</label>
+			<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="gain weight">Набор массы
+			</label>
+			<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="I don't know">Не знаю (Нужен ваш совет)
+			</label>
+		</fieldset>
+		<fieldset class="contacts">
+			<legend class="contacts__title">
+				Контактные данные (владельца кота)
+			</legend>
+			<label class="contacts__label label" for="email">E-mail:<span aria-hidden="true">*</span></label>
+			<input class="contacts__field field" id="email" name="email" type="text" placeholder="кuklachev@gmail.com" required>
+			<label class="contacts__label label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
+			<input class="contacts__field field" id="phone" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
+		</fieldset>
+		<div class="comment">
+			<label class="comment__title" for="comment">Комментарий</label>
+			<input class="comment__field field" name="comment" type="text" id="comment" placeholder="Расскажите обо всех повадках кота">
+		</div>
+		<fieldset class="additional">
+			<legend class="additional__title">Дополнительно</legend>
+			<ul class="additional__product-list">
+				<li class="additional__product-item">
+					<label class="additional__product-title">
+						<input class="additional__product-control-input" type="checkbox" name="additional-product" value="sweetener" checked>
+						Сахарозаменитель
+					</label>
 				</li>
-				<li class="site-list__item">
-					<a href="catalog.html" aria-current="page">
-						Каталог продукции
-					</a>
+				<li class="additional__product-item">
+					<label class="additional__product-title">
+						<input class="additional__product-control-input" type="checkbox" name="additional-product" value="drinking water">
+						Питьевая вода
+					</label>
 				</li>
-				<li class="site-list__item site-list__item--current">
-					<a href="form.html">
-						Подбор продукции
-					</a>
+				<li class="additional__product-item">
+					<label class="additional__product-title">
+						<input class="additional__product-control-input" type="checkbox" name="additional-product" value="milk">
+						Молоко
+					</label>
+				</li>
+				<li class="additional__product-item">
+					<label class="additional__product-title">
+						<input class="additional__product-control-input" type="checkbox" name="additional-product" value="vitamins">
+						Витамины
+					</label>
 				</li>
 			</ul>
-		</nav>
-	</header>
-
-	<main class="main-container">
-		<h1 class="form-title">Подбор программы</h1>
-		<p class="form-description">Заполните анкету, и мы подберем
-			программу питания для вашего кота</p>
-		<form class="page-form" action="https://echo.htmlacademy.ru/" method="get">
-			<fieldset class="cat-information">
-				<legend class="visually-hidden">Информация о вашем коте</legend>
-				<label class="cat-information__label label" for="cat-name">Имя:<span aria-hidden="true">*</span></label>
-				<input class="cat-information__field field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
-				<label class="cat-information__label label" for="cat-weight">Вес (кг):<span aria-hidden="true">*</span></label>
-				<input class="cat-information__field field" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
-				<label class="cat-information__label label" for="cat-age">Возраст (лет):</label>
-				<input class="cat-information__field field" id="cat-age" name="cat-age" type="number" placeholder="7">
-			</fieldset>
-			<fieldset class="programm-goal">
-				<legend class="visually-hidden">Цель программы</legend>
-				<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="lose weight" checked>Похудение
-				</label>
-				<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="gain weight">Набор массы
-				</label>
-				<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="I don't know">Не знаю (Нужен ваш совет)
-				</label>
-			</fieldset>
-			<fieldset class="contacts">
-				<legend class="contacts__title">
-					Контактные данные (владельца кота)
-				</legend>
-				<label class="contacts__label label" for="email">E-mail:<span aria-hidden="true">*</span></label>
-				<input class="contacts__field field" id="email" name="email" type="text" placeholder="кuklachev@gmail.com" required>
-				<label class="contacts__label label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
-				<input class="contacts__field field" id="phone" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
-			</fieldset>
-			<div class="comment">
-				<label class="comment__title" for="comment">Комментарий</label>
-				<input class="comment__field field" name="comment" type="text" id="comment" placeholder="Расскажите обо всех повадках кота">
-			</div>
-			<fieldset class="additional">
-				<legend class="additional__title">Дополнительно</legend>
-				<ul class="additional__product-list">
-					<li class="additional__product-item">
-						<label class="additional__product-title">
-							<input class="additional__product-control-input" type="checkbox" name="additional-product" value="sweetener" checked>
-							Сахарозаменитель
-						</label>
-					</li>
-					<li class="additional__product-item">
-						<label class="additional__product-title">
-							<input class="additional__product-control-input" type="checkbox" name="additional-product" value="drinking water">
-							Питьевая вода
-						</label>
-					</li>
-					<li class="additional__product-item">
-						<label class="additional__product-title">
-							<input class="additional__product-control-input" type="checkbox" name="additional-product" value="milk">
-							Молоко
-						</label>
-					</li>
-					<li class="additional__product-item">
-						<label class="additional__product-title">
-							<input class="additional__product-control-input" type="checkbox" name="additional-product" value="vitamins">
-							Витамины
-						</label>
-					</li>
-				</ul>
-			</fieldset>
-			<button class="button form-button" type="submit">Отправить заявку</button>
-			<p><span aria-hidden="true"></span>* — Обязательные поля</span></p>
-		</form>
-		<section class="cooperation">
-			<h2 class="cooperation__title">Приглашаем
-				к сотрудничеству
-				дилеров!</h2>
-			<p class="cooperation__adress-street">ул. Большая
-				Конюшенная, д. 19/8</p>
-			<p class="cooperation__adress-city">Санкт-Петербург</p>
-			<div class="cooperation__adress-map map">
-				<img class="map__image" src="http://placekitten.com/320/362" alt="#">
-			</div>
-		</section>
-	</main>
-	<footer class="main-footer">
-		<div class="main-footer__wrapper">
-			<div class="main-footer__logo">
-				<a class="main-footer__logo-link" href="index.html">
-					<img class="logo-text" src="http://placekitten.com/128/24" alt="Cat Energy." width="128" height="24">
-				</a>
-			</div>
-			<div class="main-footer__social">
-				<h2 class="visually-hidden">Социальные Сети Кэт Энержи</h2>
-				<ul class="main-footer__social-list">
-					<li class="main-footer__social-item">
-						<h3 class="visually-hidden">Вконтакте</h3>
-						<a class="main-footer__social-item-vk" href="#">
-						</a>
-					</li>
-					<li class="main-footer__social-item">
-						<h3 class="visually-hidden">YouTube</h3>
-						<a class="main-footer__social-item-youtube" href="#">
-						</a>
-					</li>
-					<li class="main-footer__social-item">
-						<h3 class="visually-hidden">Телеграм</h3>
-						<a class="main-footer__social-item-telegram" href="#">
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="main-footer__copyright">
-				<a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-					<h2 class="main-footer__copyright-title">HTML Academy</h2>
-					<img class="main-footer__copyright-logo-img" src="http://placekitten.com/27/34" alt="Логотип HTML Academy.">
-				</a>
-			</div>
+		</fieldset>
+		<button class="button form-button" type="submit">Отправить заявку</button>
+		<p aria-hidden="true">* — Обязательные поля</p>
+	</form>
+	<section class="cooperation">
+		<h2 class="cooperation__title">Приглашаем
+			к сотрудничеству
+			дилеров!</h2>
+		<p class="cooperation__adress-street">ул. Большая
+			Конюшенная, д. 19/8</p>
+		<p class="cooperation__adress-city">Санкт-Петербург</p>
+		<div class="cooperation__adress-map map">
+			<img class="map__image" src="http://placekitten.com/320/362" alt="#">
 		</div>
-	</footer>
-</body>
+	</section>
+</main>
+{% endblock %}
