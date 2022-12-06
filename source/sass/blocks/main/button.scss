@@ -1,0 +1,19 @@
+.button {
+	font-family: "Oswald", sans-serif;
+	font-size: 14px;
+	font-weight: 400px;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: rgba(104, 183, 56, 1);
+
+	&:hover {
+		background-color: rgb(94, 170, 47);
+	}
+
+	&:active {
+		background-color: rgb(94, 170, 47);
+		color: rgb(255, 255, 255, 0.3);
+	}
+}

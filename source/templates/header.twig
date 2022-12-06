@@ -8,7 +8,7 @@
 		<ul class="main-nav__list site-list">
 			{% for page in pages %}
 			<li class="site-list__item site-list__item--current">
-				<a href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
+				<a class="site-list__item-link" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
 					{{page.name}}
 				</a>
 			</li>

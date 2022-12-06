@@ -1,0 +1,37 @@
+.program-type {
+	list-style-type: none;
+}
+
+.program-type__card {
+	background-color: rgb(242, 242, 242);
+}
+
+.program-type__card-title {
+	font-family: "Oswald", sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 37px;
+	color: rgba(0, 0, 0, 1);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.program-type__card-description {
+	font-family: "Lato", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: left;
+	color: rgba(68, 68, 68, 1);
+}
+
+.program-type__card-button {
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 1);
+}
