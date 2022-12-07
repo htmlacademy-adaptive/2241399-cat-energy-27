@@ -4,9 +4,10 @@
 
 {% block main %}
 <main class="main-container">
-	<h1 class="form-title">Подбор программы</h1>
-	<p class="form-description">Заполните анкету, и мы подберем
-		программу питания для вашего кота</p>
+	<section class="form">
+	<h1 class="form__title">Подбор программы</h1>
+	<p class="form__description">Заполните анкету, и мы подберем
+		программу питания для вашего кота</p></section>
 	<form class="page-form" action="https://echo.htmlacademy.ru/" method="get">
 		<fieldset class="cat-information">
 			<legend class="visually-hidden">Информация о вашем коте</legend>
@@ -17,17 +18,17 @@
 			<label class="cat-information__label label" for="cat-age">Возраст (лет):</label>
 			<input class="cat-information__field field" id="cat-age" name="cat-age" type="number" placeholder="7">
 		</fieldset>
-		<fieldset class="programm-goal">
+		<fieldset class="program-goal">
 			<legend class="visually-hidden">Цель программы</legend>
-			<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="lose weight" checked>Похудение
+			<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="lose weight" checked>Похудение
 			</label>
-			<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="gain weight">Набор массы
+			<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="gain weight">Набор массы
 			</label>
-			<label class="programm-goal__item-label"><input class="programm-goal__item" type="radio" name="programm-goal" value="I don't know">Не знаю (Нужен ваш совет)
+			<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="I don't know">Не знаю (Нужен ваш совет)
 			</label>
 		</fieldset>
 		<fieldset class="contacts">
-			<legend class="contacts__title">
+			<legend class="contacts__title legend-title">
 				Контактные данные (владельца кота)
 			</legend>
 			<label class="contacts__label label" for="email">E-mail:<span aria-hidden="true">*</span></label>
@@ -36,11 +37,11 @@
 			<input class="contacts__field field" id="phone" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
 		</fieldset>
 		<div class="comment">
-			<label class="comment__title" for="comment">Комментарий</label>
+			<label class="comment__title legend-title" for="comment">Комментарий</label>
 			<input class="comment__field field" name="comment" type="text" id="comment" placeholder="Расскажите обо всех повадках кота">
 		</div>
 		<fieldset class="additional">
-			<legend class="additional__title">Дополнительно</legend>
+			<legend class="additional__title legend-title">Дополнительно</legend>
 			<ul class="additional__product-list">
 				<li class="additional__product-item">
 					<label class="additional__product-title">
@@ -68,19 +69,22 @@
 				</li>
 			</ul>
 		</fieldset>
+
 		<button class="button form-button" type="submit">Отправить заявку</button>
 		<p aria-hidden="true">* — Обязательные поля</p>
-	</form>
-	<section class="cooperation">
-		<h2 class="cooperation__title">Приглашаем
-			к сотрудничеству
-			дилеров!</h2>
-		<p class="cooperation__adress-street">ул. Большая
-			Конюшенная, д. 19/8</p>
-		<p class="cooperation__adress-city">Санкт-Петербург</p>
-		<div class="cooperation__adress-map map">
-			<img class="map__image" src="http://placekitten.com/320/362" alt="#">
-		</div>
+
+		<section class="cooperation">
+			<div class="cooperation__adress-wrapper">
+			<h2 class="cooperation__title">приглашаем
+				к сотрудничеству
+				дилеров!</h2>
+			<p class="cooperation__adress-adress">ул. Большая Конюшенная, д. 19/8
+				Санкт-Петербург</p>
+			</div>
+			<div class="cooperation__adress-map map">
+				<img class="map__image" src="http://placekitten.com/320/362" alt="#">
+			</div>
+		</section>
 	</section>
 </main>
 {% endblock %}
