@@ -3,7 +3,7 @@
 }
 
 .program-type__card {
-	background-color: rgb(242, 242, 242);
+	background-color: rgb(242 242 242);
 }
 
 .program-type__card-title {
@@ -11,7 +11,7 @@
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 37px;
-	color: rgba(0, 0, 0, 1);
+	color: rgb(0 0 0 / 1);
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -22,7 +22,7 @@
 	font-weight: 400;
 	line-height: 18px;
 	text-align: left;
-	color: rgba(68, 68, 68, 1);
+	color: rgb(68 68 68 / 1);
 }
 
 .program-type__card-button {
@@ -33,5 +33,5 @@
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: rgba(0, 0, 0, 1);
+	color: rgb(0 0 0 / 1);
 }
