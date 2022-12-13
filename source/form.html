@@ -4,11 +4,12 @@
 
 {% block main %}
 <main class="main-container">
-	<section class="form">
+	<section class="form page__centerer">
 	<h1 class="form__title">Подбор программы</h1>
 	<p class="form__description">Заполните анкету, и мы подберем
 		программу питания для вашего кота</p></section>
-	<form class="page-form" action="https://echo.htmlacademy.ru/" method="get">
+	<form class="page-form page__centerer" action="https://echo.htmlacademy.ru/" method="get">
+		<div class="page-form__field-wrapper">
 		<fieldset class="cat-information">
 			<legend class="visually-hidden">Информация о вашем коте</legend>
 			<label class="cat-information__label label" for="cat-name">Имя:<span aria-hidden="true">*</span></label>
@@ -27,6 +28,7 @@
 			<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="I don't know">Не знаю (Нужен ваш совет)
 			</label>
 		</fieldset>
+	</div>
 		<fieldset class="contacts">
 			<legend class="contacts__title extra-form-title">
 				Контактные данные (владельца кота)

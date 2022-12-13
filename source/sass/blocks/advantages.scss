@@ -1,6 +1,23 @@
 .advantages__list {
 	list-style-type: none;
 	text-align: left;
+	display: grid;
+	gap: 24px;
+}
+
+@media #{$not-mobile} {
+	.advantages__list {
+		display: grid;
+		grid-template-columns: 230px 230px;
+		gap: 37px 153px;
+	}
+}
+
+@media #{$desktop-only} {
+	.advantages__list {
+		display: flex;
+		gap: 94px;
+	}
 }
 
 .advantages__title {
@@ -14,5 +31,5 @@
 }
 
 .advantages__item {
-	color: rgb(68 68 68 / 1);
+	color: var(--main-color);
 }

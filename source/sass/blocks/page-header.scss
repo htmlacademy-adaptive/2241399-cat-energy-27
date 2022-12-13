@@ -1,7 +1,11 @@
 .page-header {
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.page-header__wrapper {
 	display: flex;
 	justify-content: space-between;
-	background-color: #ffffff;
 }
 
 .page-header__logo {

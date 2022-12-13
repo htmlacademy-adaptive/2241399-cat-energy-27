@@ -1,0 +1,6 @@
+@media #{$desktop-only} {
+	.page-form__field-wrapper {
+		display: flex;
+		gap: 80px;
+	}
+}

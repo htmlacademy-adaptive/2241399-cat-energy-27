@@ -1,3 +1,7 @@
+.cat-energy-description {
+	display: grid;
+}
+
 .cat-energy-description__title {
 	font-family: "Oswald", sans-serif;
 	font-weight: 400;
@@ -6,18 +10,19 @@
 	line-height: 36px;
 	text-align: center;
 	color: #ffffff;
-	background-color: rgb(104 183 56 / 1);
+	background-color: var(--accent-color);
 }
 
 .cat-energy-description__text {
 	font-size: 14px;
 	line-height: 14px;
 	color: #ffffff;
-	background-color: rgb(104 183 56 / 1);
+	background-color: var(--accent-color);
 	text-align: center;
 	text-transform: uppercase;
 }
 
 .cat-energy-description__button {
 	padding: 7px 44px;
+	order: 3;
 }
