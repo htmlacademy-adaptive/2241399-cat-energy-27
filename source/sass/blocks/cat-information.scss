@@ -1,5 +1,9 @@
 .cat-information {
 	display: grid;
-	grid-template-columns: auto auto;
-	row-gap: 14px;
+	row-gap: 20px;
+}
+
+.cat-information__wrapper {
+	display: flex;
+	gap: 13px;
 }

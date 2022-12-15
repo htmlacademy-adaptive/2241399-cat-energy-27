@@ -2,6 +2,10 @@
 	background-color: rgb(234 234 234);
 }
 
+.example__wrapper {
+	display: flex;
+}
+
 .example__title {
 	font-family: "Oswald", sans-serif;
 	font-weight: 400;
@@ -15,8 +19,8 @@
 .example__result-list {
 	list-style-type: none;
 	display: grid;
-	grid-template-columns: 125px 124px;
-	gap: 32px;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px 32px;
 }
 
 @media #{$not-mobile} {
@@ -27,11 +31,6 @@
 }
 
 @media #{$desktop-only} {
-	.example {
-		display: grid;
-		grid-template-columns: 50% 50%;
-	}
-
 	.example__slider {
 		grid-row: 1/4;
 		grid-column: 2/3;
@@ -39,7 +38,14 @@
 
 	.example__result-list {
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px 32px;
+	}
+
+	.example__result-item--total {
+		display: flex;
+		justify-content: space-between;
+		grid-column: 1/3;
 	}
 }
 

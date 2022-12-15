@@ -1,5 +1,10 @@
+.contacts__item {
+	display: flex;
+	gap: 20px;
+}
+
 @media #{$desktop-only} {
-	.page-form__field-wrapper {
+	.contacts__wrapper {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 80px;

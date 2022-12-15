@@ -16,3 +16,10 @@
 .additional-product-card__button {
 	padding: 10px 109px;
 }
+
+@media #{$desktop-only} {
+	.additional-product-card {
+		display: flex;
+		justify-content: space-between;
+	}
+}

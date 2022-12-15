@@ -5,38 +5,51 @@
 {% block main %}
 <main class="main-container">
 	<section class="form page__centerer">
-	<h1 class="form__title">Подбор программы</h1>
-	<p class="form__description">Заполните анкету, и мы подберем
-		программу питания для вашего кота</p></section>
+		<h1 class="form__title">Подбор программы</h1>
+		<p class="form__description">Заполните анкету, и мы подберем
+			программу питания для вашего кота</p>
+	</section>
 	<form class="page-form page__centerer" action="https://echo.htmlacademy.ru/" method="get">
 		<div class="page-form__field-wrapper">
-		<fieldset class="cat-information">
-			<legend class="visually-hidden">Информация о вашем коте</legend>
-			<label class="cat-information__label label" for="cat-name">Имя:<span aria-hidden="true">*</span></label>
-			<input class="cat-information__field field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
-			<label class="cat-information__label label" for="cat-weight">Вес (кг):<span aria-hidden="true">*</span></label>
-			<input class="cat-information__field field" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
-			<label class="cat-information__label label" for="cat-age">Возраст (лет):</label>
-			<input class="cat-information__field field" id="cat-age" name="cat-age" type="number" placeholder="7">
-		</fieldset>
-		<fieldset class="program-goal">
-			<legend class="visually-hidden">Цель программы</legend>
-			<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="lose weight" checked>Похудение
-			</label>
-			<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="gain weight">Набор массы
-			</label>
-			<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="I don't know">Не знаю (Нужен ваш совет)
-			</label>
-		</fieldset>
-	</div>
+			<fieldset class="cat-information">
+				<legend class="visually-hidden">Информация о вашем коте</legend>
+				<div class="cat-information__wrapper">
+					<label class="cat-information__label label" for="cat-name">Имя:<span aria-hidden="true">*</span></label>
+					<input class="cat-information__field field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
+				</div>
+				<div class="cat-information__wrapper">
+					<label class="cat-information__label label" for="cat-weight">Вес (кг):<span aria-hidden="true">*</span></label>
+					<input class="cat-information__field field" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
+				</div>
+				<div class="cat-information__wrapper">
+					<label class="cat-information__label label" for="cat-age">Возраст (лет):</label>
+					<input class="cat-information__field field" id="cat-age" name="cat-age" type="number" placeholder="7">
+				</div>
+			</fieldset>
+			<fieldset class="program-goal">
+				<legend class="visually-hidden">Цель программы</legend>
+				<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="lose weight" checked>Похудение
+				</label>
+				<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="gain weight">Набор массы
+				</label>
+				<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="I don't know">Не знаю (Нужен ваш совет)
+				</label>
+			</fieldset>
+		</div>
 		<fieldset class="contacts">
 			<legend class="contacts__title extra-form-title">
 				Контактные данные (владельца кота)
 			</legend>
-			<label class="contacts__label label" for="email">E-mail:<span aria-hidden="true">*</span></label>
-			<input class="contacts__field field" id="email" name="email" type="text" placeholder="кuklachev@gmail.com" required>
-			<label class="contacts__label label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
-			<input class="contacts__field field" id="phone" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
+			<div class="contacts__wrapper">
+				<div class="contacts__item">
+					<label class="contacts__label label" for="email">E-mail:<span aria-hidden="true">*</span></label>
+					<input class="contacts__field field" id="email" name="email" type="text" placeholder="кuklachev@gmail.com" required>
+				</div>
+				<div class="contacts__item">
+					<label class="contacts__label label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
+					<input class="contacts__field field" id="phone" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
+				</div>
+			</div>
 		</fieldset>
 		<div class="comment">
 			<label class="comment__title extra-form-title" for="comment">Комментарий</label>
@@ -76,17 +89,17 @@
 		<p aria-hidden="true">* — Обязательные поля</p>
 
 		<section class="cooperation">
-			<div class="cooperation__adress-wrapper">
-			<h2 class="cooperation__title">приглашаем
-				к сотрудничеству
-				дилеров!</h2>
-			<p class="cooperation__adress-adress">ул. Большая Конюшенная, д. 19/8
-				Санкт-Петербург</p>
+			<div class="cooperation__adress-wrapper page__centerer">
+				<h2 class="cooperation__title">приглашаем
+					к сотрудничеству
+					дилеров!</h2>
+				<p class="cooperation__adress-adress">ул. Большая Конюшенная, д. 19/8
+					Санкт-Петербург</p>
 			</div>
 			<div class="cooperation__adress-map map">
 				<img class="map__image" src="http://placekitten.com/320/362" alt="#">
 			</div>
 		</section>
-	</section>
+		</section>
 </main>
 {% endblock %}
