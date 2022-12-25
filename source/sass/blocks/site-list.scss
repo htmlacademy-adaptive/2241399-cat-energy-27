@@ -1,5 +1,7 @@
 .site-list {
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .site-list__item-link {
@@ -11,6 +13,21 @@
 	text-transform: uppercase;
 	color: rgb(0 0 0);
 	text-decoration: none;
+}
+
+@media #{$mobile-only} {
+	.site-list {
+		border-bottom: 1px solid #e6e6e6;
+		width: 100%;
+	}
+
+	.site-list__item {
+		background-color: #ffffff;
+		padding-block: 22px;
+		text-align: center;
+		border-top: 1px solid #e6e6e6;
+		padding-inline: 20px;
+	}
 }
 
 @media #{$not-mobile} {
