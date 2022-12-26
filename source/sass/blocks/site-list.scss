@@ -34,6 +34,7 @@
 	.site-list {
 		display: flex;
 		gap: 34px;
+		padding: 42px 0 0 0;
 	}
 
 	.site-list__item-link {
@@ -42,10 +43,44 @@
 		line-height: 24px;
 		text-align: left;
 	}
+
+	.site-list__item[aria-current="page"] {
+		position: relative;
+	}
+
+	.site-list__item[aria-current="page"]::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		background: var(--accent-color);
+	}
 }
 
 @media #{$desktop-only} {
 	.site-list {
 		gap: 37px;
+		padding: 70px 0 0 0;
+	}
+
+	.site-list__item-link {
+		color: #ffffff;
+		background-color: var(--accent-color);
+	}
+
+	.site-list__item[aria-current="page"] {
+		position: relative;
+	}
+
+	.site-list__item[aria-current="page"]::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		background: #ffffff;
 	}
 }
