@@ -11,7 +11,17 @@
 		<p class="cat-energy-description__text">Занялся собой? Займись котом!</p>
 		<a class="cat-energy-description__button button" href="form.html">подобрать программу</a>
 </div>
-		<img class="cat-energy-description__img" src="http://placekitten.com/280/270" width="552" height="449" alt="Корм Cat energy pro со вкусом курицы.">
+		<picture>
+			<source type="image/avif" media="(min-width: 1140px)" srcset="img/can-desktop@1x.avif 1x, img/can-desktop@2x.avif 2x">
+			<source type="image/avif" media="(min-width:768px)" srcset="img/can-tablet@1x.avif 1x, img/can-tablet@2x.avif 2x">
+			<source type="image/webp" media="(min-width: 1140px)" srcset="img/can-desktop@1x.webp 1x, img/can-desktop@2x.webp 2x">
+			<source type="image/webp" media="(min-width:768px)" srcset="img/can-tablet@1x.webp 1x, img/can-tablet@2x.webp 2x">
+			<source srcset="img/can-desktop@1x.png 1x, img/can-desktop@2x.png 2x" media="(min-width:
+			1140px)">
+			<source srcset="img/can-tablet@1x.png 1x, img/can-tablet@2x.png 2x" media="(min-width:
+			768px)">
+			<img class="cat-energy-description__img" src="./img/can-mobile@1x.png" srcset="img/can-mobile@2x.png 2x" alt="Корм Cat Energy Pro со вкусом курицы">
+		</picture>
 	</section>
 	<ul class="program-type page__centerer">
 		<li class="program-type__card program-type__card--slim">
