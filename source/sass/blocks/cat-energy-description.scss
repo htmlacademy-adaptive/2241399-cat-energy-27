@@ -1,5 +1,8 @@
 .cat-energy-description {
 	display: grid;
+	background: var(--bg-image) no-repeat center / contain;
+
+	@include bg-image("cat-background");
 }
 
 @media #{$not-desktop} {

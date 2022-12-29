@@ -11,19 +11,7 @@
 			<p class="cat-energy-description__text">Занялся собой? Займись котом!</p>
 			<a class="cat-energy-description__button button" href="form.html">подобрать программу</a>
 		</div>
-		<picture>
-			<source type="image/avif" media="(min-width: 1280px)" srcset="img/can-desktop@1x.avif 1x, img/can-desktop@2x.avif 2x" width="552" height="499">
-			<source type="image/avif" media="(min-width:768px)" srcset="img/can-tablet@1x.avif 1x, img/can-tablet@2x.avif 2x" width="709" height="609">
-			<source type="image/avif" media="(min-width:320px)" srcset="img/can-mobile@1x.avif 1x, img/can-mobile@2x.avif 2x" width="280" height="270">
-			<source type="image/webp" media="(min-width: 1280px)" srcset="img/can-desktop@1x.webp 1x, img/can-desktop@2x.webp 2x" width="552" height="499">
-			<source type="image/webp" media="(min-width:768px)" srcset="img/can-tablet@1x.webp 1x, img/can-tablet@2x.webp 2x" width="709" height="609">
-			<source type="image/webp" media="(min-width:320px)" srcset="img/can-mobile@1x.webp 1x, img/can-mobile@2x.webp 2x" width="280" height="270">
-			<source media="(min-width:
-			1280px)" srcset="img/can-desktop@1x.png 1x, img/can-desktop@2x.png 2x" width="552" height="499">
-			<source media="(min-width:
-			768px)" srcset="img/can-tablet@1x.png 1x, img/can-tablet@2x.png 2x" width="709" height="609">
-			<img class="cat-energy-description__img" src="./img/can-mobile@1x.png" srcset="img/can-mobile@2x.png 2x" width="280" height="270" alt="Корм Cat Energy Pro со вкусом курицы">
-		</picture>
+		{% include "templates/picture.twig" with {name: "can", class: "cat-energy-description__img", alt: "Корм Cat Energy Pro со вкусом курицы."} %}
 	</section>
 	<ul class="program-type page__centerer">
 		<li class="program-type__card program-type__card--slim">
@@ -81,9 +69,9 @@
 			</div>
 
 			<div class="example__slider before-after-slider">
-				<img class="before-after-slider__image before-after-slider__image--before" src="http://placekitten.com/280/256" alt="Толстый кот до похудения.">
+				{% include "templates/picture.twig" with {name: "slide-before", class: "before-after-slider__image", alt: "Толстый кот до похудения."} %}
 				<button class="before-after-slider__button" type="button"></button>
-				<img class="before-after-slider__image before-after-slider__image--after" src="http://placekitten.com/280/256" alt="Худой кот после похудения.">
+				{% include "templates/picture.twig" with {name: "slide-after", class: "before-after-slider__image before-after-slider__image--after", alt: "Худой кот после похудения."} %}
 			</div>
 		</div>
 	</section>
@@ -96,6 +84,7 @@
 				Санкт-Петербург</p>
 		</div>
 		<div class="cooperation__adress-map map">
+			{% include "templates/picture.twig" with {name: "map", class: "map__img", alt: "Точка на карте по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8."} %}
 			<iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586862!2d30.320853351538165!3d59.93871648178723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1672084773520!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 	</section>

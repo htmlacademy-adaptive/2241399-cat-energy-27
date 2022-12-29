@@ -1,4 +1,7 @@
 .promotion {
 	background-color: var(--accent-color);
 	color: rgb(255 255 255);
+	background-image: var(--bg-image) no-repeat center / contain;
+
+	@include bg-image("bag-background");
 }
