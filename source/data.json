@@ -95,7 +95,7 @@
 			]
 		},
 		"cat-background": {
-			"ext": "png",
+			"ext": "jpg",
 			"maxdppx": 2,
 			"sizes": [
 				{
@@ -111,7 +111,7 @@
 			]
 		},
 		"bag-background": {
-			"ext": "png",
+			"ext": "jpg",
 			"maxdppx": 2,
 			"sizes": [
 				{
