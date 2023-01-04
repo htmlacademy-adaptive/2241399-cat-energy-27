@@ -12,10 +12,6 @@
 	display: contents;
 }
 
-.page-header__logo-svg-text {
-	color: rgb(253 195 5);
-}
-
 @media #{$not-mobile} {
 	.page-header__toggle {
 		display: none;
