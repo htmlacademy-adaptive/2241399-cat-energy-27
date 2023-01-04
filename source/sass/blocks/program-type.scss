@@ -24,6 +24,15 @@
 	.program-type__card-title {
 		padding-inline: 91px 20px;
 		width: fit-content;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			background-image: url("source/icons/stack.svg#tall-cat");
+			width: 67px;
+			height: 28px;
+		}
 	}
 
 	.program-type__card-description {
