@@ -4,29 +4,230 @@
 	display: grid;
 	gap: 24px;
 	padding: 0;
+	margin: 0;
+	counter-reset: section;
 }
 
-@media #{$not-mobile} {
+@media #{$mobile-only} {
+	.advantages__item {
+		width: 199px;
+		padding-left: 80px;
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			background-color: var(--accent-color);
+			top: -3px;
+			left: -1px;
+		}
+
+		&--icon-leaf::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#leaf");
+			top: 10px;
+			left: 14px;
+		}
+
+		&--icon-pot::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#pot");
+			top: 10px;
+			left: 14px;
+		}
+
+		&--icon-cutlery::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#cutlery");
+			top: 10px;
+			left: 14px;
+		}
+
+		&--icon-alarm::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#alarm");
+			top: 10px;
+			left: 14px;
+		}
+	}
+
+	.advantages__title {
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+
+@media #{$desktop-only} {
+	.advantages__title {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	.advantages__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 80px;
+	}
+
+	.advantages__item {
+		font-size: 16px;
+		line-height: 24px;
+		padding-top: 183px;
+		width: 248px;
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			background-color: var(--accent-color);
+			top: 70px;
+			left: -1px;
+		}
+
+		&--icon-leaf::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#leaf");
+			top: 94px;
+			left: 23px;
+		}
+
+		&--icon-pot::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#pot");
+			top: 94px;
+			left: 23px;
+		}
+
+		&--icon-cutlery::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#cutlery");
+			top: 94px;
+			left: 23px;
+		}
+
+		&--icon-alarm::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#alarm");
+			top: 94px;
+			left: 23px;
+		}
+	}
+}
+
+@media #{$tablet-only} {
+	.advantages__title {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
 	.advantages__list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 37px 153px;
 	}
-}
 
-@media #{$desktop-only} {
-	.advantages__list {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 80px;
+	.advantages__item {
+		width: 245px;
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			background-color: var(--accent-color);
+			top: -3px;
+			left: -1px;
+		}
+
+		&--icon-leaf::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#leaf");
+			top: 10px;
+			left: 14px;
+		}
+
+		&--icon-pot::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#pot");
+			top: 10px;
+			left: 14px;
+		}
+
+		&--icon-cutlery::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#cutlery");
+			top: 10px;
+			left: 14px;
+		}
+
+		&--icon-alarm::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 32px;
+			background-image: url("/icons/stack.svg#alarm");
+			top: 10px;
+			left: 14px;
+		}
 	}
 }
 
 .advantages__title {
 	font-family: "Oswald", sans-serif;
 	font-weight: 400;
-	font-size: 36px;
-	line-height: 40px;
 	color: rgb(0 0 0 / 1);
 	text-transform: none;
 	text-align: left;
