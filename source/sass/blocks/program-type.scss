@@ -24,12 +24,34 @@
 	.program-type__card-title {
 		padding-inline: 91px 20px;
 		width: fit-content;
+		position: relative;
 
 		&::before {
 			content: "";
 			position: absolute;
 			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: var(--accent-color);
+			left: 20px;
+			top: -10px;
+		}
+
+		&--slim::after {
+			content: "";
+			position: absolute;
+			display: block;
 			background-image: url("source/icons/stack.svg#tall-cat");
+			width: 67px;
+			height: 28px;
+		}
+
+		&--pro::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background-image: url("source/icons/stack.svg#long-cat");
 			width: 67px;
 			height: 28px;
 		}
