@@ -161,12 +161,37 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 37px 137px;
+		counter-reset: css-counter 0;
+	}
+
+	.adventages__list-wrapper {
+		counter-increment: css-counter 1;
+
+		&::after {
+			content: counter(css-counter) "";
+			font-family: "Oswald", sans-serif;
+			font-size: 280px;
+			position: absolute;
+			color: #f2f2f2;
+			z-index: 0;
+		}
 	}
 
 	.advantages__item {
 		width: 245px;
 		position: relative;
 		padding: 151px 26px 57px 0;
+		counter-increment: css-counter 1;
+		z-index: 3;
+
+		&::after {
+			content: counter(css-counter) "";
+			font-family: "Oswald", sans-serif;
+			font-size: 280px;
+			position: absolute;
+			color: #f2f2f2;
+			z-index: 0;
+		}
 
 		&::before {
 			content: "";

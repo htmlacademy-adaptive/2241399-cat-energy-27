@@ -1,8 +1,5 @@
 .cat-energy-description {
 	display: grid;
-	background: var(--bg-image) no-repeat center / contain;
-
-	@include bg-image("cat-background");
 }
 
 @media #{$not-desktop} {
@@ -11,12 +8,91 @@
 	}
 }
 
-@media #{$tablet-only} {
+@media #{$mobile-only} {
+	.cat-energy-description {
+		background: var(--bg-image) no-repeat center / contain;
+
+		@include bg-image("cat-background");
+		background-position: 0 0;
+		width: 100%;
+	}
+
+	.cat-energy-description__wrapper {
+		background-color: var(--accent-color);
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			background:
+				linear-gradient(
+					hsl(97 53% 47% / 0.85),
+					hsl(97 53% 47% / 0.85)
+				);
+			min-width: 320px;
+			min-height: 302px;
+			width: 100%;
+			height: auto;
+			position: absolute;
+			z-index: 0;
+		}
+	}
+
+	.cat-energy-description__title {
+		font-family: "Oswald", sans-serif;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 36px;
+		text-align: center;
+		color: #ffffff;
+		width: 280px;
+		margin: 0;
+		padding: 27px 20px 25px 20px;
+		z-index: 1;
+	}
+
+	.cat-energy-description__text {
+		font-family: "Oswald", sans-serif;
+		font-size: 14px;
+		line-height: 14px;
+		color: #ffffff;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0;
+		z-index: 1;
+	}
+
+	.cat-energy-description__img-wrapper {
+		z-index: 5;
+	}
+
+	.cat-energy-description__img {
+		display: block;
+		padding-top: 29px;
+		margin-inline: auto;
+	}
+
 	.cat-energy-description__button {
+		padding: 7px 44px;
+		order: 4;
+	}
+}
+
+@media #{$tablet-only} {
+	.cat-energy-description {
+		position: relative;
+	}
+
+	.cat-energy-description__button {
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 400;
 		grid-row: 3/4;
 		grid-column: 1/2;
-		width: 166px;
-		height: 41px;
+		position: absolute;
+		top: 50px;
+		left: 60px;
+		padding: 14px 26px;
 	}
 
 	.cat-energy-description__img {
@@ -25,44 +101,103 @@
 	}
 
 	.cat-energy-description__title {
-		text-align: left;
 		grid-column: 1/2;
+		font-family: "Oswald", sans-serif;
+		font-size: 60px;
+		font-weight: 400;
+		line-height: 60px;
+		text-align: left;
+		color: rgb(0 0 0 / 1);
+		width: 475px;
+		padding-inline: 87px 207px;
+		padding-top: 62px;
+		margin: 0 auto;
 	}
 
 	.cat-energy-description__text {
+		font-family: "Oswald", sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 20px;
+		color: rgb(0 0 0 / 1);
 		text-align: left;
 		grid-column: 1/2;
+		text-transform: uppercase;
+		padding-left: 89px;
+		padding-block: 41px 20px;
+		margin: 0;
 	}
 }
 
 @media #{$desktop-only} {
 	.cat-energy-description {
+		padding-bottom: 54px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		background: var(--bg-image) no-repeat center / contain;
+
+		@include bg-image("cat-background");
+		background-position: right;
+
+		&::after {
+			content: "";
+			display: block;
+			background:
+				linear-gradient(
+					hsl(97 53% 47% / 0.85),
+					hsl(97 53% 47% / 0.85)
+				);
+			min-width: 720px;
+			min-height: 694px;
+			width: auto;
+			height: auto;
+			position: absolute;
+			z-index: 0;
+			left: 50%;
+		}
 	}
-}
 
-.cat-energy-description__title {
-	font-family: "Oswald", sans-serif;
-	font-weight: 400;
-	font-style: none;
-	font-size: 36px;
-	line-height: 36px;
-	text-align: center;
-	color: #ffffff;
-	background-color: var(--accent-color);
-}
 
-.cat-energy-description__text {
-	font-size: 14px;
-	line-height: 14px;
-	color: #ffffff;
-	background-color: var(--accent-color);
-	text-align: center;
-	text-transform: uppercase;
-}
+	.cat-energy-description__title {
+		font-family: "Oswald", sans-serif;
+		font-weight: 400;
+		font-size: 60px;
+		line-height: 60px;
+		text-align: left;
+		color: rgb(0 0 0 / 1);
+		width: 560px;
+		margin: 0;
+		padding-top: 223px;
+		padding-left: 190px;
+		z-index: 1;
+	}
 
-.cat-energy-description__button {
-	padding: 7px 44px;
-	order: 4;
+	.cat-energy-description__text {
+		font-size: 14px;
+		line-height: 14px;
+		text-align: left;
+		text-transform: uppercase;
+		z-index: 1;
+		color: rgb(0 0 0 / 1);
+		margin: 0;
+		padding-block: 40px 52px;
+		padding-left: 190px;
+	}
+
+	.cat-energy-description__button {
+		padding: 14px 26px;
+		order: 4;
+		margin-left: 190px;
+		margin-bottom: 185px;
+	}
+
+	.cat-energy-description__img {
+		display: block;
+		margin-top: 141px;
+		padding-right: 250px;
+	}
+
+	.cat-energy-description__img-wrapper {
+		z-index: 2;
+	}
 }

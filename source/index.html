@@ -4,14 +4,15 @@
 
 {% block main %}
 <main class="main-container">
-	<section class="cat-energy-description page__centerer">
+	<section class="cat-energy-description">
 		<div class="cat-energy-description__wrapper">
 			<h1 class="cat-energy-description__title">Функциональное
 				питание для котов</h1>
 			<p class="cat-energy-description__text">Занялся собой? Займись котом!</p>
-			<a class="cat-energy-description__button button" href="form.html">подобрать программу</a>
+			<a class="cat-energy-description__button button page__centerer" href="form.html">подобрать программу</a>
 		</div>
-		{% include "templates/picture.twig" with {name: "can", class: "cat-energy-description__img", alt: "Корм Cat Energy Pro со вкусом курицы."} %}
+		<div class="cat-energy-description__img-wrapper">
+		{% include "templates/picture.twig" with {name: "can", class: "cat-energy-description__img", alt: "Корм Cat Energy Pro со вкусом курицы."} %} </div>
 	</section>
 	<ul class="program-type page__centerer">
 		<li class="program-type__card program-type__card--slim">
@@ -29,8 +30,7 @@
 		<h2 class="advantages__title">Как это работает</h2>
 		<ul class="advantages__list">
 			<li class="advantages__item advantages__item--icon-leaf">
-				Функциональное питание содержит только полезные питательные вещества.
-			</li>
+				Функциональное питание содержит только полезные питательные вещества.</li>
 			<li class="advantages__item advantages__item--icon-pot">Выпускается в виде порошка,
 				который нужно лишь залить
 				кипятком и готово.

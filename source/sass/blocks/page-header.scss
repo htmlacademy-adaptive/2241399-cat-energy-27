@@ -27,6 +27,10 @@
 		object-fit: fill;
 		margin-top: 25px;
 	}
+
+	.page-header__logo-toggle-wrapper {
+		padding-bottom: 12px;
+	}
 }
 
 @media #{$mobile-only} {
@@ -56,6 +60,7 @@
 	.page-header__logo-toggle-wrapper {
 		display: flex;
 		justify-content: space-between;
+		padding-bottom: 17px;
 	}
 
 
@@ -71,6 +76,12 @@
 }
 
 @media #{$desktop-only} {
+	.page-header {
+		position: absolute;
+		background-color: transparent;
+		z-index: 3;
+	}
+
 	.page-header__logo-text {
 		object-fit: fill;
 		margin-top: 75px;
