@@ -4,26 +4,27 @@
 	font-weight: 400;
 	text-align: left;
 	text-decoration: none;
+}
 
+@media #{$mobile-only} {
 	.copyright__link {
 		font-size: 16px;
 		line-height: 19px;
 		position: relative;
 	}
 
-	@media #{$mobile-only} {
-		.copyright__link::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 27px;
-			height: 34px;
-			background-image: url("/icons/stack.svg#html-academy-logo");
-			left: 250px;
-			top: -7px;
-		}
+	.copyright__link::after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 27px;
+		height: 34px;
+		background-image: url("/icons/stack.svg#html-academy-logo");
+		left: 250px;
+		top: -7px;
 	}
 }
+
 
 @media #{$tablet-only} {
 	.copyright__link::after {
