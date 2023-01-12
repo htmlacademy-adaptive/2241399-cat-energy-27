@@ -1,18 +1,62 @@
 .form__title {
 	font-family: "Oswald", sans-serif;
-	font-size: 36px;
 	font-weight: 400;
-	line-height: 36px;
 	text-align: left;
 	color: rgb(0 0 0);
+	margin: 0;
+	padding: 27px 5px 37px 0;
 }
 
 .form__description {
 	font-family: "Oswald", sans-serif;
-	font-size: 14px;
 	font-weight: 400;
-	line-height: 18px;
 	text-transform: uppercase;
 	text-align: left;
 	color: rgb(0 0 0);
+	margin: 0;
+	padding-bottom: 39px;
+	padding-right: 10px;
+	width: 226px;
+}
+
+@media #{$mobile-only} {
+	.form__title {
+		font-size: 36px;
+		line-height: 36px;
+	}
+
+	.form__description {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+@media #{$tablet-only} {
+	.form__title {
+		font-size: 60px;
+		line-height: 60px;
+		padding-block: 65px 54px;
+		padding-left: 39px;
+	}
+
+	.form__description {
+		font-size: 20px;
+		line-height: 30px;
+		width: 323px;
+		padding-left: 39px;
+	}
+}
+
+@media #{$desktop-only} {
+	.form__title {
+		font-size: 60px;
+		line-height: 60px;
+		padding-block: 187px 56px;
+	}
+
+	.form__description {
+		font-size: 20px;
+		line-height: 30px;
+		width: 323px;
+	}
 }

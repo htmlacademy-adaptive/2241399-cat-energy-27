@@ -1,6 +1,5 @@
 .additional__product-list {
 	display: grid;
-	gap: 13px;
 	list-style-type: none;
 	font-family: "Oswald", sans-serif;
 	font-size: 16px;
@@ -23,5 +22,234 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 80px;
+	}
+}
+
+@media #{$mobile-only} {
+	.additional {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		padding-bottom: 40px;
+	}
+
+	.additional__title {
+		padding-bottom: 40px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: var(--accent-color);
+			height: 2px;
+			min-width: 136px;
+			width: auto;
+			margin-left: 170px;
+			top: 16px;
+		}
+	}
+
+	.additional__product-list {
+		gap: 25px;
+		padding: 0;
+		padding-left: 46px;
+		margin: 0;
+	}
+
+	.additional__product-control-input {
+		appearance: none;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 30px;
+			height: 30px;
+			border: 1px solid rgb(205 205 205 / 1);
+			top: -20px;
+			left: -45px;
+		}
+
+		&:checked::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 30px;
+			height: 30px;
+			background-image: url("/icons/stack.svg#tick-checkbox");
+			top: -20px;
+			left: -45px;
+		}
+	}
+
+	.additional__text {
+		padding-top: 21px;
+		text-align: center;
+		padding-bottom: 32px;
+		margin-block: 0;
+	}
+}
+
+@media #{$tablet-only} {
+	.additional {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		padding-bottom: 60px;
+	}
+
+	.additional__product-title {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.additional__title {
+		padding-bottom: 62px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: var(--accent-color);
+			height: 2px;
+			min-width: 30px;
+			width: auto;
+			margin-left: -70px;
+			top: 20px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: var(--accent-color);
+			height: 2px;
+			min-width: 446px;
+			width: auto;
+			margin-left: 250px;
+			top: 20px;
+		}
+	}
+
+	.additional__product-list {
+		gap: 25px;
+		padding: 0;
+		padding-left: 46px;
+		margin: 0;
+	}
+
+	.additional__product-control-input {
+		appearance: none;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			border: 1px solid rgb(205 205 205 / 1);
+			top: -25px;
+			left: -65px;
+		}
+
+		&:checked::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			background-image: url("/icons/stack.svg#tick-checkbox");
+			top: -25px;
+			left: -65px;
+		}
+	}
+
+	.additional__text {
+		text-align: center;
+	}
+}
+
+@media #{$desktop-only} {
+	.additional {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		padding-bottom: 60px;
+	}
+
+	.additional__product-title {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.additional__title {
+		padding-bottom: 62px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: var(--accent-color);
+			height: 2px;
+			min-width: 70px;
+			width: auto;
+			margin-left: -112px;
+			top: 20px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: var(--accent-color);
+			height: 2px;
+			min-width: 1078px;
+			width: auto;
+			margin-left: 250px;
+			top: 20px;
+		}
+	}
+
+	.additional__product-list {
+		gap: 25px;
+		padding: 0;
+		padding-left: 46px;
+		margin: 0;
+	}
+
+	.additional__product-control-input {
+		appearance: none;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			border: 1px solid rgb(205 205 205 / 1);
+			top: -25px;
+			left: -50px;
+		}
+
+		&:checked::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			background-image: url("/icons/stack.svg#tick-checkbox");
+			top: -25px;
+			left: -50px;
+		}
+	}
+
+	.additional__text {
+		text-align: center;
 	}
 }

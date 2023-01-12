@@ -1,8 +1,22 @@
 .label {
 	font-family: "Oswald", sans-serif;
-	font-size: 16px;
 	font-weight: 400;
-	line-height: 18px;
 	text-transform: uppercase;
 	text-align: left;
+}
+
+@media #{$mobile-only} {
+	.label {
+		padding-block: 12px;
+		font-size: 16px;
+		line-height: 18px;
+	}
+}
+
+@media #{$not-mobile} {
+	.label {
+		padding-block: 7px;
+		font-size: 20px;
+		line-height: 30px;
+	}
 }

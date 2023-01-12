@@ -9,53 +9,57 @@
 		<p class="form__description">Заполните анкету, и мы подберем
 			программу питания для вашего кота</p>
 	</section>
-	<form class="page-form page__centerer" action="https://echo.htmlacademy.ru/" method="get">
+	<form class="page-form" action="https://echo.htmlacademy.ru/" method="get">
 		<div class="page-form__field-wrapper">
 			<fieldset class="cat-information">
 				<legend class="visually-hidden">Информация о вашем коте</legend>
-				<div class="cat-information__wrapper">
+				<div class="cat-information__wrapper page__centerer">
 					<label class="cat-information__label label" for="cat-name">Имя:<span aria-hidden="true">*</span></label>
-					<input class="cat-information__field field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
+					<input class="cat-information__name field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
 				</div>
-				<div class="cat-information__wrapper">
+				<div class="cat-information__wrapper page__centerer">
 					<label class="cat-information__label label" for="cat-weight">Вес (кг):<span aria-hidden="true">*</span></label>
-					<input class="cat-information__field field" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
+					<input class="cat-information__weight field" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
 				</div>
-				<div class="cat-information__wrapper">
+				<div class="cat-information__wrapper page__centerer">
 					<label class="cat-information__label label" for="cat-age">Возраст (лет):</label>
-					<input class="cat-information__field field" id="cat-age" name="cat-age" type="number" placeholder="7">
+					<input class="cat-information__age field" id="cat-age" name="cat-age" type="number" placeholder="7">
 				</div>
 			</fieldset>
 			<fieldset class="program-goal">
+				<div class="page__centerer program-goal-wrapper-desktop">
+					<div class="program-goal-wrapper">
 				<legend class="visually-hidden">Цель программы</legend>
 				<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="lose weight" checked>Похудение
 				</label>
 				<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="gain weight">Набор массы
 				</label>
 				<label class="program-goal__item-label"><input class="program-goal__item" type="radio" name="program-goal" value="I don't know">Не знаю (Нужен ваш совет)
-				</label>
-			</fieldset>
+				</label></div>
+				</div></fieldset>
 		</div>
 		<fieldset class="contacts">
+			<div class="page__centerer">
 			<legend class="contacts__title extra-form-title">
 				Контактные данные (владельца кота)
 			</legend>
 			<div class="contacts__wrapper">
 				<div class="contacts__item">
-					<label class="contacts__label label" for="email">E-mail:<span aria-hidden="true">*</span></label>
-					<input class="contacts__field field" id="email" name="email" type="text" placeholder="кuklachev@gmail.com" required>
+					<label class="contacts__label contacts__label--email label" for="email">E-mail:<span aria-hidden="true">*</span></label>
+					<input class="contacts__email field" id="email" name="email" type="text" placeholder="кuklachev@gmail.com" required>
 				</div>
 				<div class="contacts__item">
-					<label class="contacts__label label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
-					<input class="contacts__field field" id="phone" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
+					<label class="contacts__label contacts__label--phone label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
+					<input class="contacts__phone field" id="phone" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
 				</div>
 			</div>
-		</fieldset>
-		<div class="comment">
+			</div></fieldset>
+		<div class="comment page__centerer">
 			<label class="comment__title extra-form-title" for="comment">Комментарий</label>
 			<input class="comment__field field" name="comment" type="text" id="comment" placeholder="Расскажите обо всех повадках кота">
 		</div>
 		<fieldset class="additional">
+			<div class="page__centerer">
 			<legend class="additional__title  extra-form-title">Дополнительно</legend>
 			<ul class="additional__product-list">
 				<li class="additional__product-item">
@@ -83,14 +87,15 @@
 					</label>
 				</li>
 			</ul>
+		</div>
 		</fieldset>
 
-		<button class="button form-button" type="submit">Отправить заявку</button>
-		<p aria-hidden="true">* — Обязательные поля</p>
+		<div class="form-button__wrapper"><button class="button form-button page__centerer" type="submit">Отправить заявку</button>
+		<p class="additional__text" aria-hidden="true">* — Обязательные поля</p></div></form>
 
-		<section class="cooperation">
-			<div class="cooperation__adress-wrapper page__centerer">
-				<h2 class="cooperation__title">приглашаем
+		<section class="cooperation cooperation--form-page">
+			<div class="cooperation__adress-wrapper cooperation__adress-wrapper--form-page page__centerer">
+				<h2 class="cooperation__title">приглашаем<br>
 					к сотрудничеству
 					дилеров!</h2>
 				<p class="cooperation__adress-adress">ул. Большая Конюшенная, д. 19/8
@@ -101,6 +106,6 @@
 				<iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586862!2d30.320853351538165!3d59.93871648178723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1672084773520!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</section>
-		</section>
+
 </main>
 {% endblock %}

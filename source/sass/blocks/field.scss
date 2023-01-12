@@ -9,4 +9,19 @@
 	text-align: left;
 	color: var(--main-color);
 	appearance: textfield;
+	box-sizing: border-box;
+}
+
+@media #{$mobile-only} {
+	.field {
+		padding: 14px 20px 13px 20px;
+		height: 45px;
+	}
+}
+
+@media #{$not-mobile} {
+	.field {
+		padding: 11px 20px;
+		height: 52px;
+	}
 }
