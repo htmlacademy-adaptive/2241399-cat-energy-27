@@ -9,7 +9,6 @@
 
 @media #{$mobile-only} {
 	.advantages__item {
-		width: 199px;
 		padding-left: 80px;
 		position: relative;
 
@@ -72,6 +71,10 @@
 	.advantages__title {
 		font-size: 36px;
 		line-height: 40px;
+	}
+
+	.advantages {
+		margin-bottom: 50px;
 	}
 }
 

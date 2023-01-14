@@ -10,31 +10,23 @@
 
 @media #{$mobile-only} {
 	.cat-energy-description {
-		background: var(--bg-image) no-repeat center / contain;
-
-		@include bg-image("cat-background");
-		background-position: 0 0;
-		width: 100%;
-	}
-
-	.cat-energy-description__wrapper {
-		background-color: var(--accent-color);
 		position: relative;
 
 		&::after {
 			content: "";
-			display: block;
-			background:
-				linear-gradient(
-					hsl(97 53% 47% / 0.85),
-					hsl(97 53% 47% / 0.85)
-				);
-			min-width: 320px;
-			min-height: 302px;
-			width: 100%;
-			height: auto;
 			position: absolute;
-			z-index: 0;
+			width: 100%;
+			height: 302px;
+			background: linear-gradient(
+				rgb(104 183 56 / 0.85),
+				rgb(104 183 56 / 0.85)
+			),
+				var(--bg-image) no-repeat center / contain,
+				linear-gradient(
+				rgb(62 61 66),
+				rgb(62 61 66));
+
+			@include bg-image("cat-background");
 		}
 	}
 
@@ -129,29 +121,30 @@
 
 @media #{$desktop-only} {
 	.cat-energy-description {
-		padding-bottom: 54px;
+		margin-bottom: 281px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		background: var(--bg-image) no-repeat center / contain;
 
-		@include bg-image("cat-background");
-		background-position: right;
 
 		&::after {
 			content: "";
-			display: block;
-			background:
-				linear-gradient(
-					hsl(97 53% 47% / 0.85),
-					hsl(97 53% 47% / 0.85)
-				);
-			min-width: 720px;
-			min-height: 694px;
-			width: auto;
-			height: auto;
 			position: absolute;
+			width: 50vw;
+			height: 696px;
+			background: linear-gradient(
+				rgb(104 183 56 / 0.85),
+				rgb(104 183 56 / 0.85)
+			),
+				var(--bg-image) no-repeat center / contain,
+				linear-gradient(
+				rgb(62 61 66),
+				rgb(62 61 66));
+
+			@include bg-image("cat-background");
 			z-index: 0;
-			left: 50%;
+			top: 0;
+			right: 0;
+			left: 50vw;
 		}
 	}
 
@@ -164,7 +157,7 @@
 		text-align: left;
 		color: rgb(0 0 0 / 1);
 		margin: 0;
-		padding-top: 223px;
+		padding-top: 111px;
 		padding-left: 190px;
 		z-index: 1;
 	}
@@ -189,9 +182,10 @@
 	}
 
 	.cat-energy-description__img {
+		position: absolute;
 		display: block;
-		margin-top: 141px;
-		padding-right: 250px;
+		top: 156px;
+		left: 570px;
 	}
 
 	.cat-energy-description__img-wrapper {

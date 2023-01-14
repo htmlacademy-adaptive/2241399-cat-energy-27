@@ -92,49 +92,38 @@
 @media #{$mobile-only} {
 	.program-type__card {
 		padding-block: 30px 18px;
-		margin-top: 20px;
-		width: 280px;
+		margin: 20px 0;
 	}
 
 	.program-type__card-title {
-		padding-inline: 91px 20px;
+		padding-inline: 22px 20px;
 		width: fit-content;
-		position: relative;
 		font-size: 24px;
 		line-height: 36px;
 
+		--has-icon: "";
+		--circle-radius: calc(100% * 100 / 280);
+		--circle-color: var(--accent-color);
+		--icon-position: left;
+		--icon-size: 50px;
+		--icon-margin: -6px 9px 12px -8px;
+
 		&::before {
-			content: "";
-			position: absolute;
+			content: var(--has-icon, none);
 			display: block;
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			background-color: var(--accent-color);
-			left: 20px;
-			top: -10px;
+			float: var(--icon-position);
+			block-size: var(--icon-size);
+			inline-size: var(--icon-size);
+			margin: var(--icon-margin);
+			background-image: var(--icon, var(--icon-a)), radial-gradient(var(--circle-color) calc(var(--circle-radius) - 0.5px), transparent calc(var(--circle-radius) + 0.5px));
 		}
 
-		&--slim::after {
-			content: "";
-			position: absolute;
-			display: block;
-			background-image: url("/icons/stack.svg#tall-cat");
-			width: 36px;
-			height: 50px;
-			left: 25px;
-			top: -12px;
+		&--slim {
+			--icon: url("/icons/stack.svg#tall-cat");
 		}
 
-		&--pro::after {
-			content: "";
-			position: absolute;
-			display: block;
-			background-image: url("/icons/stack.svg#long-cat");
-			width: 67px;
-			height: 28px;
-			left: 10px;
-			top: 4px;
+		&--pro {
+			--icon: url{"/icons/stack.svg#long-cat"};
 		}
 	}
 
@@ -143,7 +132,6 @@
 		margin: 0;
 		font-size: 14px;
 		line-height: 18px;
-		width: 227px;
 	}
 
 	.program-type__card-button {

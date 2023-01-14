@@ -30,11 +30,12 @@
 	}
 }
 
-@media #{$not-mobile} {
+@media #{$desktop-only} {
 	.site-list {
 		display: flex;
 		gap: 34px;
-		padding: 42px 0 0 0;
+		z-index: 5;
+		padding-top: 70px;
 	}
 
 	.site-list__item-link {
@@ -62,10 +63,13 @@
 @media #{$desktop-only} {
 	.site-list {
 		gap: 37px;
-		padding: 70px 0 0 0;
 	}
 
 	.site-list__item-link {
+		color: #000000;
+	}
+
+	.site-list__item-link--with-background {
 		color: #ffffff;
 	}
 

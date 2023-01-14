@@ -36,18 +36,6 @@
 	.additional__title {
 		padding-bottom: 40px;
 		position: relative;
-
-		&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			background-color: var(--accent-color);
-			height: 2px;
-			min-width: 136px;
-			width: auto;
-			margin-left: 170px;
-			top: 16px;
-		}
 	}
 
 	.additional__product-list {
@@ -107,31 +95,6 @@
 
 	.additional__title {
 		padding-bottom: 62px;
-		position: relative;
-
-		&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			background-color: var(--accent-color);
-			height: 2px;
-			min-width: 30px;
-			width: auto;
-			margin-left: -70px;
-			top: 20px;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			background-color: var(--accent-color);
-			height: 2px;
-			min-width: 446px;
-			width: auto;
-			margin-left: 250px;
-			top: 20px;
-		}
 	}
 
 	.additional__product-list {

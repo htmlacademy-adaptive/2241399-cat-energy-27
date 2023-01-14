@@ -10,7 +10,7 @@
 		<ul class="page-header__nav-list page-header__nav-list--nojs site-list">
 			{% for page in pages %}
 			<li class="site-list__item site-list__item--current ">
-				<a class="site-list__item-link" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
+				<a class="site-list__item-link {% if permalink==index.html %}site-list__item-link--with-background {% endif %}" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
 					{{page.name}}
 				</a>
 			</li>
