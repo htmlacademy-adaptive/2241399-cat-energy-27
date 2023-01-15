@@ -1,0 +1,166 @@
+.main-nav {
+	position: relative;
+
+	@media #{$mobile-only} {
+		--toggle-visibility: visible;
+	}
+
+	@media #{$not-mobile} {
+		padding-block: 15px;
+	}
+
+	&--nojs {
+		@media #{$mobile-only} {
+			--toggle-visibility: collapse;
+			--nav-position: static;
+		}
+	}
+
+	&--closed {
+		--toggle-icon: url("../../icons/stack.svg#burger");
+
+		@media #{$mobile-only} {
+			--nav-visibility: collapse;
+		}
+	}
+
+	&--with-background {
+		@media #{$desktop-only} {
+			--link-color: #ffffff;
+			--link-decor-color: currentColor;
+		}
+	}
+}
+
+@media #{$desktop-only} {
+	.main-nav--with-background {
+		--link-color: #ffffff;
+	}
+}
+
+.main-nav__toggle {
+	visibility: var(--toggle-visibility, collapse);
+	position: absolute;
+	display: block;
+	padding: 0;
+	top: -45px;
+	right: 0;
+	border: none;
+	cursor: pointer;
+	background-color: #ffffff;
+	z-index: 3;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		background-color: #000000;
+		mask: var(--toggle-icon, url("../../icons/stack.svg#cross")) no-repeat center / contain;
+	}
+}
+
+.main-nav__list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+	@media #{$mobile-only} {
+		visibility: var(--nav-visibility, visible);
+		position: var(--nav-position, absolute);
+		z-index: 10;
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	@media #{$not-mobile} {
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap: 36px;
+	}
+}
+
+.main-nav__item {
+	@media #{$mobile-only} {
+		--has-border: "";
+		position: relative;
+		background-color: #ffffff;
+		box-shadow:
+			50vw 0 0 0 #ffffff,
+			-50vw 0 0 0 #ffffff;
+	}
+
+	&::before {
+		content: var(--has-border, none);
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 1px;
+		background-color: #e6e6e6;
+		box-shadow: 100vw 0 0 0 #e6e6e6;
+	}
+
+	&::after {
+		content: var(--has-border, none);
+		position: absolute;
+		bottom: -1px;
+		right: 0;
+		width: 100vw;
+		height: 1px;
+		background-color: #e6e6e6;
+		box-shadow: 100vw 0 0 0 #e6e6e6;
+	}
+
+	&::marker {
+		color: transparent;
+	}
+}
+
+.main-nav__link {
+	box-sizing: border-box;
+	display: block;
+	font-family: "Oswald", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--link-color, rgb(0 0 0));
+	text-decoration: none;
+
+	@media #{$mobile-only} {
+		width: 100%;
+		padding: 23px;
+	}
+
+	@media #{$not-mobile} {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	@media #{$desktop-only} {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	&[aria-current="page"] {
+		@media #{$not-mobile} {
+			--link-has-decor: "";
+			position: relative;
+		}
+	}
+
+	&::after {
+		content: var(--link-has-decor, none);
+		position: absolute;
+		right: 0;
+		bottom: -11px;
+		left: 0;
+		height: 2px;
+		background: var(--accent-color);
+		background-color: var(--link-decor-color, #68b738);
+	}
+}

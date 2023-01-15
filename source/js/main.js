@@ -1,12 +1,11 @@
-let navMain = document.querySelector('.page-header__nav-list');
-let navToggle = document.querySelector('.page-header__toggle');
+let navMain = document.querySelector('.main-nav');
+let navToggle = document.querySelector('.main-nav__toggle');
 
-navMain.classList.remove('page-header__nav-list--nojs');
-navToggle.classList.remove('page-header__toggle--nojs');
+navMain.classList.remove('main-nav--nojs');
+navMain.classList.add('main-nav--closed');
 
 navToggle.addEventListener('click', function () {
-		navMain.classList.toggle('page-header__nav-list--opened');
-		navToggle.classList.toggle('page-header__toggle--opened');
+	navMain.classList.toggle('main-nav--closed');
 });
 
 let mapImg = document.querySelector('.map__img');

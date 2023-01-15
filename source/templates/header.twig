@@ -1,21 +1,24 @@
-<header class="page-header">
-	<div class="page-header__wrapper page__centerer">
-		<div class="page-header__logo-toggle-wrapper">
-			<a class="page-header__logo" href="index.html">
-				<img class="page-header__logo-mobile" src="./img/logo.svg#logo-mobile" alt="CAT ENERGY" width="33" height="37">
-				<img class="page-header__logo-text" src="./img/logo.svg#logo-text" alt="CAT ENERGY" width="101" height="18">
-			</a>
-			<button class="page-header__toggle page-header__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
-		</div>
-		<ul class="page-header__nav-list page-header__nav-list--nojs site-list">
+<header class="main-header page__centerer">
+	<a class="main-header__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+		<picture>
+			<source media="(min-width: 1280px)" srcset="./img/logo.svg#logo-desktop" width="71" height="59">
+			<source media="(min-width: 768px)" srcset="./img/logo.svg#logo-tablet" width="61" height="51">
+			<img class="main-header__logo-mark" src="./img/logo.svg#logo-mobile" width="34" height="39" alt="Фирменный знак Cat Energy">
+		</picture>
+		<img class="main-header__logo-text" src="./img/logo.svg#logo-text" width="102" height="19" alt="Логотип Cat Energy">
+	</a>
+	<nav class="main-header__nav main-nav main-nav--nojs {% if permalink == "index.html" %}main-nav--with-background{% endif %}">
+		<button class="main-nav__toggle" type="button">
+			<span class="visually-hidden">Открыть меню</span>
+		</button>
+		<ul class="main-nav__list">
 			{% for page in pages %}
-			<li class="site-list__item site-list__item--current ">
-				<a class="site-list__item-link {% if permalink==index.html %}site-list__item-link--with-background {% endif %}" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
+			<li class="main-nav__item">
+				<a class="main-nav__link" href="{{page.path}}" {% if permalink == page.path %}aria-current="page"{% endif %}>
 					{{page.name}}
 				</a>
 			</li>
 			{% endfor %}
 		</ul>
-		</nav>
-	</div>
+	</nav>
 </header>
