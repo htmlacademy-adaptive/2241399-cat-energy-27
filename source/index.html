@@ -48,18 +48,19 @@
 		</ul>
 	</section>
 	<section class="example">
+		<h2 class="example__title page__centerer">Живой пример</h2>
+		<div class="example__main-wrapper">
 		<div class="example__wrapper page__centerer">
 			<div class="example__text-wrapper">
-				<h2 class="example__title">Живой пример</h2>
 				<p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 				<dl class="example__result-list">
-					<div class="example__result-item">
-						<dt class="example__result-description">Снижение веса</dt>
-						<dd class="example__result-number">5 кг</dd>
+					<div class="example__result-item example__result-item--item">
+						<dt class="example__result-description example__result-description--item">Снижение веса</dt>
+						<dd class="example__result-number example__result-number--item">5 кг</dd>
 					</div>
-					<div class="example__result-item">
-						<dt class="example__result-description">Затрачено времени</dt>
-						<dd class="example__result-number">60 дней</dd>
+					<div class="example__result-item example__result-item--item">
+						<dt class="example__result-description example__result-description--item">Затрачено времени</dt>
+						<dd class="example__result-number example__result-number--item">60 дней</dd>
 					</div>
 					<div class="example__result-item example__result-item--total ">
 						<dt class="example__result-description example__result-description--total">Затраты на питание:</dt>
@@ -69,12 +70,14 @@
 			</div>
 
 			<div class="example__slider before-after-slider">
-				{% include "templates/picture.twig" with {name: "slide-before", class: "before-after-slider__image", alt: "Толстый кот до похудения."} %}
-				<button class="before-after-slider__button" type="button"></button>
-				{% include "templates/picture.twig" with {name: "slide-after", class: "before-after-slider__image before-after-slider__image--after", alt: "Худой кот после похудения."} %}
+			<div class="before-after-slider__img-before">
+				{% include "templates/picture.twig" with {name: "slide-before", class: "before-after-slider__image", alt: "Толстый кот до похудения."} %} </div><div class="before-after-slider__button-wrapper">
+			<button class="before-after-slider__button" type="button"></button>
 			</div>
+				{% include "templates/picture.twig" with {name: "slide-after", class: "before-after-slider__image before-after-slider__image--after", alt: "Худой кот после похудения."} %}
+				</div>
 		</div>
-	</section>
+		</div></section>
 
 	<section class="cooperation">
 		<div class="cooperation__adress-wrapper page__centerer">

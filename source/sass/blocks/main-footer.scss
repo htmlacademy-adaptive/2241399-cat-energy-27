@@ -17,6 +17,11 @@
 		padding: 39px 76px 32px 76px;
 	}
 
+	.main-footer__logo-link {
+		display: flex;
+		justify-content: center;
+	}
+
 	.main-footer__social-list {
 		display: flex;
 		gap: 24px;
