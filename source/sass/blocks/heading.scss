@@ -1,0 +1,17 @@
+.heading__decorated {
+	--air-gap: 1em;
+	--line-color: var(--accent-color);
+	--line-thickness: 2px;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset-block-start: calc(50% + var(--line-thickness));
+		inset-inline-end: calc(100% + var(--air-gap));
+		block-size: var(--line-thickness);
+		inline-size: calc(100vw - 100% - var(--air-gap));
+		background-color: var(--line-color);
+		box-shadow: calc(100vw + var(--air-gap)) 0 0 0 var(--line-color);
+	}
+}

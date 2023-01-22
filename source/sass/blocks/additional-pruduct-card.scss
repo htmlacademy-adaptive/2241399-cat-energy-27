@@ -17,8 +17,8 @@
 	padding: 10px 109px;
 }
 
-@media #{$desktop-only} {
-	.additional-product-card {
+.additional-product-card {
+	@media #{$desktop-only} {
 		display: flex;
 		justify-content: space-between;
 	}

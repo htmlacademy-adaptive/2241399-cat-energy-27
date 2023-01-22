@@ -1,5 +1,5 @@
-@media #{$desktop-only} {
-	.page-form__field-wrapper {
+.page-form__field-wrapper {
+	@media #{$desktop-only} {
 		display: grid;
 		grid-template-columns: repeat(2, 569px);
 		gap: 80px;
@@ -9,8 +9,8 @@
 	}
 }
 
-@media #{$tablet-only} {
-	.page-form {
+.page-form {
+	@media #{$tablet-only} {
 		margin-inline: 40px 37px;
 	}
 }

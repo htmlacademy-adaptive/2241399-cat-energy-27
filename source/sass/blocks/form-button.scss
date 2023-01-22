@@ -1,44 +1,43 @@
-@media #{$mobile-only} {
-	.form-button {
+.form-button {
+	box-sizing: border-box;
+	font-family: "Oswald", sans-serif;
+	text-align: center;
+	margin: 0;
+	font-weight: 400;
+
+	@media #{$mobile-only} {
 		padding: 10px 44px;
-		box-sizing: border-box;
 		min-width: 280px;
 		width: auto;
+		height: 40px;
 	}
-}
 
-@media #{$tablet-only} {
-	.form-button {
-		box-sizing: border-box;
+	@media #{$tablet-only} {
 		width: 282px;
 		height: 52px;
-		font-family: "Oswald", sans-serif;
 		font-size: 20px;
 		font-weight: 400;
-		text-align: center;
-		margin: 0;
 	}
 
-	.form-button__wrapper {
-		display: flex;
-		gap: 64px;
+	@media #{$desktop-only} {
+		width: 568px;
+		height: 52px;
+		font-size: 20px;
 	}
 }
 
-@media #{$desktop-only} {
-	.form-button {
-		box-sizing: border-box;
-		width: 568px;
-		height: 52px;
-		font-family: "Oswald", sans-serif;
-		font-size: 20px;
-		font-weight: 400;
-		text-align: center;
-		margin: 0;
+.form-button__wrapper {
+	display: flex;
+
+	@media #{$mobile-only} {
+		flex-direction: column;
 	}
 
-	.form-button__wrapper {
-		display: flex;
+	@media #{$tablet-only} {
+		gap: 64px;
+	}
+
+	@media #{$desktop-only} {
 		gap: 84px;
 		margin-left: 81px;
 		margin-bottom: 82px;

@@ -1,18 +1,18 @@
-@media #{$desktop-only} {
-	.additional-catalog__wrapper {
+.additional-catalog__wrapper {
+	@media #{$desktop-only} {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
 		column-gap: 80px;
 	}
-
-	.additional-catalog__list {
-		display: grid;
-		gap: 54px;
-	}
 }
 
-@media #{$not-mobile} {
-	.additional-catalog__list {
+.additional-catalog__list {
+	display: grid;
+	list-style-type: none;
+	padding: 0;
+	gap: 32px;
+
+	@media #{$not-mobile} {
 		gap: 54px;
 	}
 }
@@ -24,17 +24,4 @@
 	line-height: 24px;
 	color: rgb(0 0 0);
 	text-align: center;
-}
-
-.additional-catalog__list {
-	list-style-type: none;
-	padding: 0;
-}
-
-
-@media #{$mobile-only} {
-	.additional-catalog__list {
-		display: grid;
-		gap: 32px;
-	}
 }

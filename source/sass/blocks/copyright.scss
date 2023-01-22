@@ -4,16 +4,9 @@
 	font-weight: 400;
 	text-align: left;
 	text-decoration: none;
-}
+	position: relative;
 
-@media #{$mobile-only} {
-	.copyright__link {
-		font-size: 16px;
-		line-height: 19px;
-		position: relative;
-	}
-
-	.copyright__link::after {
+	&::after {
 		content: "";
 		position: absolute;
 		display: block;
@@ -23,31 +16,24 @@
 		left: 250px;
 		top: -7px;
 	}
-}
 
+	@media #{$mobile-only} {
+		font-size: 16px;
+		line-height: 19px;
+	}
 
-@media #{$tablet-only} {
-	.copyright__link::after {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 27px;
-		height: 34px;
-		background-image: url("/icons/stack.svg#html-academy-logo");
-		left: 713px;
-		top: 55px;
+	@media #{$not-mobile} {
+		text-align: right;
+
+		&::after {
+			left: 120px;
+		}
 	}
 }
 
-@media #{$desktop-only} {
-	.copyright__link::after {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 27px;
-		height: 34px;
-		background-image: url("/icons/stack.svg#html-academy-logo");
-		left: 1302px;
-		top: 55px;
+.copyright {
+	@media #{$not-mobile} {
+		justify-content: end;
+		padding-right: 55px;
 	}
 }

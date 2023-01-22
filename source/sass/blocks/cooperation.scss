@@ -1,5 +1,11 @@
 .cooperation {
 	background-color: #ffffff;
+
+	@media #{$desktop-only} {
+		.cooperation {
+			position: relative;
+		}
+	}
 }
 
 .cooperation__title {
@@ -10,73 +16,56 @@
 	text-align: left;
 	text-transform: uppercase;
 	color: rgb(17 17 17);
+	margin: 0;
+	width: 138px;
+
+	@media #{$tablet-only} {
+		width: 171px;
+		font-size: 20px;
+		line-height: 26px;
+	}
+
+	@media #{$desktop-only} {
+		width: 163px;
+		font-size: 20px;
+		line-height: 26px;
+	}
 }
+
 
 .cooperation__adress-adress {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;
 	text-align: left;
+	margin: 0;
+	width: 140px;
+
+	@media #{$tablet-only} {
+		width: 160px;
+	}
+
+	@media #{$desktop-only} {
+		width: 155px;
+	}
 }
 
-@media #{$mobile-only} {
-	.cooperation__adress-wrapper {
-		display: flex;
+.cooperation__adress-wrapper {
+	display: flex;
+	justify-content: space-between;
+
+	@media #{$mobile-only} {
 		padding-block: 26px;
 		gap: 2px;
-		justify-content: space-between;
 	}
 
-	.cooperation--form-page {
-		background-color: rgb(242 242 242 / 1);
-	}
-
-	.cooperation__title {
-		margin: 0;
-		width: 138px;
-	}
-
-	.cooperation__adress-adress {
-		margin: 0;
-		width: 140px;
-	}
-}
-
-@media #{$tablet-only} {
-	.cooperation__adress-wrapper {
-		display: flex;
+	@media #{$tablet-only} {
 		padding-block: 56px;
 		gap: 365px;
 		margin-inline: 40px;
-		justify-content: space-between;
 	}
 
-	.cooperation--form-page {
-		background-color: rgb(242 242 242 / 1);
-		width: 100%;
-		margin-inline: 0;
-		margin-top: 72px;
-	}
-
-	.cooperation__title {
-		margin: 0;
-		width: 171px;
-		font-size: 20px;
-		line-height: 26px;
-	}
-
-	.cooperation__adress-adress {
-		margin: 0;
-		width: 160px;
-	}
-}
-
-@media #{$desktop-only} {
-	.cooperation {
-		position: relative;
-	}
-
-	.cooperation__adress-wrapper {
+	@media #{$desktop-only} {
 		background-color: #ffffff;
 		position: absolute;
 		display: flex;
@@ -88,16 +77,14 @@
 		margin-top: 95px;
 		margin-left: 110px;
 	}
+}
 
-	.cooperation__title {
-		margin: 0;
-		width: 163px;
-		font-size: 20px;
-		line-height: 26px;
-	}
+.cooperation--form-page {
+	background-color: rgb(242 242 242 / 1);
 
-	.cooperation__adress-adress {
-		margin: 0;
-		width: 155px;
+	@media #{$tablet-only} {
+		width: 100%;
+		margin-inline: 0;
+		margin-top: 72px;
 	}
 }

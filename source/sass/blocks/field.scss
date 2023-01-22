@@ -10,17 +10,13 @@
 	color: var(--main-color);
 	appearance: textfield;
 	box-sizing: border-box;
-}
 
-@media #{$mobile-only} {
-	.field {
+	@media #{$mobile-only} {
 		padding: 14px 20px 13px 20px;
 		height: 45px;
 	}
-}
 
-@media #{$not-mobile} {
-	.field {
+	@media #{$not-mobile} {
 		padding: 11px 20px;
 		height: 52px;
 	}

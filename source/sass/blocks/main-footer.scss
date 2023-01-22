@@ -7,193 +7,94 @@
 
 .main-footer__social-list {
 	display: flex;
-	gap: 24px;
 	list-style-type: none;
-}
+	margin: 0;
+	justify-content: center;
+	gap: 24px;
+	align-items: center;
+	padding: 0;
 
-@media #{$mobile-only} {
-	.main-footer__logo-text {
-		object-fit: fill;
-		padding: 39px 76px 32px 76px;
-	}
-
-	.main-footer__logo-link {
-		display: flex;
-		justify-content: center;
-	}
-
-	.main-footer__social-list {
-		display: flex;
-		gap: 24px;
-		margin: 0;
+	@media #{$mobile-only} {
 		height: 63px;
 		border-top: 1px solid #e6e6e6;
 		border-bottom: 1px solid #e6e6e6;
 	}
 
-	.main-footer__social-link {
-		cursor: pointer;
-		position: relative;
-
-		&--vk::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#vk");
-			top: 20px;
-			left: 28px;
-		}
-
-		&--youtube::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#youtube");
-			top: 20px;
-			left: 60px;
-		}
-
-		&--telegram::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#telegram");
-			top: 20px;
-			left: 87px;
-		}
+	@media #{$tablet-only} {
+		min-width: 132px;
 	}
 
-	.main-footer__copyright {
-		padding-block: 22px;
+	@media #{$desktop-only} {
+		min-width: 132px;
 	}
 }
 
-@media #{$not-mobile} {
-	.main-footer__wrapper {
+.main-footer__logo-text {
+	object-fit: fill;
+
+	@media #{$mobile-only} {
+		padding: 39px 76px 32px 76px;
+	}
+}
+
+.main-footer__logo-link {
+	@media #{$mobile-only} {
 		display: flex;
+		justify-content: center;
+	}
+}
+
+.main-footer__social-link {
+	cursor: pointer;
+	position: relative;
+
+	&--vk::after {
+		content: "";
+		display: block;
+		width: 28px;
+		height: 22px;
+		background-image: url("/icons/stack.svg#vk");
+	}
+
+	&--youtube::after {
+		content: "";
+		display: block;
+		width: 28px;
+		height: 22px;
+		background-image: url("/icons/stack.svg#youtube");
+	}
+
+	&--telegram::after {
+		content: "";
+		display: block;
+		width: 28px;
+		height: 22px;
+		background-image: url("/icons/stack.svg#telegram");
 	}
 }
 
 .main-footer__copyright {
-	display: flex;
-}
-
-@media #{$tablet-only} {
-	.main-footer__logo-text {
-		object-fit: fill;
-		padding-block: 63px;
-		padding-right: 155px;
+	@media #{$mobile-only} {
+		padding-block: 22px;
 	}
 
-	.main-footer__social-list {
-		gap: 24px;
-		margin: 0;
-		min-width: 132px;
-		padding-right: 108px;
-	}
-
-	.main-footer__social-link {
-		cursor: pointer;
-		position: relative;
-
-		&--vk::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#vk");
-			top: 60px;
-			left: -30px;
-		}
-
-		&--youtube::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#youtube");
-			top: 60px;
-			left: 8px;
-		}
-
-		&--telegram::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#telegram");
-			top: 60px;
-			left: 35px;
-		}
-	}
-
-	.main-footer__copyright {
-		padding-block: 63px;
+	@media #{$not-mobile} {
+		display: flex;
 	}
 }
 
-@media #{$desktop-only} {
-	.main-footer__logo-text {
-		object-fit: fill;
-		padding-block: 63px;
-		padding-right: 413px;
+.main-footer__wrapper {
+	@media #{$not-mobile} {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 132px 1fr;
 	}
 
-	.main-footer__social-list {
-		gap: 24px;
-		margin: 0;
-		min-width: 132px;
-		padding-right: 350px;
+	@media #{$tablet-only} {
+		padding-block: 55px;
 	}
 
-	.main-footer__social-link {
-		cursor: pointer;
-		position: relative;
-
-		&--vk::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#vk");
-			top: 60px;
-			left: -24px;
-		}
-
-		&--youtube::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#youtube");
-			top: 60px;
-			left: 8px;
-		}
-
-		&--telegram::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 28px;
-			height: 22px;
-			background-image: url("/icons/stack.svg#telegram");
-			top: 60px;
-			left: 35px;
-		}
-	}
-
-	.main-footer__copyright {
-		padding-block: 63px;
+	@media #{$desktop-only} {
+		padding-block: 66px;
 	}
 }

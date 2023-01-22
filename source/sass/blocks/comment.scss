@@ -1,80 +1,40 @@
 .comment {
 	display: flex;
 	flex-direction: column;
+
+	@media #{$mobile-only} {
+		padding-bottom: 23px;
+	}
+
+	@media #{$tablet-only} {
+		padding-bottom: 65px;
+	}
+
+	@media #{$desktop-only} {
+		padding-bottom: 67px;
+	}
 }
 
-@media #{$mobile-only} {
-	.comment__title {
+.comment__title {
+	@media #{$mobile-only} {
 		padding-bottom: 38px;
 	}
 
-	.comment__field {
+	@media #{$not-mobile} {
+		padding-bottom: 76px;
+	}
+}
+
+.comment__field {
+	@media #{$mobile-only} {
 		padding: 9px 12px 125px 15px;
 		height: 150px;
 	}
 
-	.comment {
-		padding-bottom: 23px;
-	}
-}
-
-@media #{$tablet-only} {
-	.comment__title {
-		padding-bottom: 76px;
-	}
-
-
-	.comment__field {
+	@media #{$not-mobile} {
 		font-size: 20px;
 		line-height: 30px;
 		padding: 10px 10px 147px 19px;
 		height: 174px;
-	}
-
-	.comment {
-		padding-bottom: 65px;
-	}
-}
-
-
-@media #{$desktop-only} {
-	.comment__title {
-		padding-bottom: 76px;
-		position: relative;
-
-		&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			background-color: var(--accent-color);
-			height: 2px;
-			min-width: 70px;
-			width: auto;
-			margin-left: -112px;
-			top: 20px;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			background-color: var(--accent-color);
-			height: 2px;
-			min-width: 1108px;
-			width: auto;
-			margin-left: 220px;
-			top: 20px;
-		}
-	}
-
-	.comment__field {
-		font-size: 20px;
-		line-height: 30px;
-		padding: 10px 10px 147px 19px;
-		height: 174px;
-	}
-
-	.comment {
-		padding-bottom: 67px;
 	}
 }

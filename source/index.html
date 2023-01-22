@@ -69,15 +69,23 @@
 				</dl>
 			</div>
 
-			<div class="example__slider before-after-slider">
-			<div class="before-after-slider__img-before">
-				{% include "templates/picture.twig" with {name: "slide-before", class: "before-after-slider__image", alt: "Толстый кот до похудения."} %} </div><div class="before-after-slider__button-wrapper">
-			<button class="before-after-slider__button" type="button"></button>
-			</div>
-				{% include "templates/picture.twig" with {name: "slide-after", class: "before-after-slider__image before-after-slider__image--after", alt: "Худой кот после похудения."} %}
+			<figure class="example__slider before-after-slider">
+				<figcaption class="before-after-slider__description visually-hidden">Кот Борис до и после 2 месяцев питания кормом Cat Energy Slim.</figcaption>
+			<div class="before-after-slider__wrapper slider" style="--curtain-place: 0.5;">
+			<div class="before-after-slider__image slider__image slider__image--state_before">
+				{% include "templates/picture.twig" with {name: "slide-before", class: "before-after-slider__image", alt: "Толстый кот до похудения."} %}
+			 </div>
+				<div class="slider__curtain">
+					<button class="slider__thumb" type="button">
+						<span class="visually-hidden">Ползунок слайдера</span>
+					</button>
 				</div>
+			<div class="slider__after">
+				{% include "templates/picture.twig" with {name: "slide-after", class: "before-after-slider__image slider__image slider__image--state_after", alt: "Худой кот после похудения."} %}</div></div>
+			</figure>
 		</div>
-		</div></section>
+		</div>
+		</section>
 
 	<section class="cooperation">
 		<div class="cooperation__adress-wrapper page__centerer">

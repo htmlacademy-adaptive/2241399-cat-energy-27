@@ -5,150 +5,91 @@
 	text-transform: uppercase;
 	text-align: left;
 	color: rgb(34 34 34 / 1);
-}
+	border: 0;
+	padding: 0;
+	margin: 0;
 
-.program-goal__item {
-	appearance: none;
-}
-
-@media #{$mobile-only} {
-	.program-goal {
+	@media #{$mobile-only} {
 		gap: 18px;
-		border: 0;
-		padding: 0;
-		margin: 0;
-		border-bottom: 1px solid rgb(217 217 217 / 1);
+		border-bottom: 1px solid #d9d9d9;
 	}
 
-	.program-goal-wrapper {
-		display: flex;
-		flex-direction: column;
+	@media #{$tablet-only} {
+		margin-left: 41px;
+		margin-right: 30px;
+		margin-bottom: 71px;
+	}
+
+	@media #{$not-mobile} {
+		padding: 25px 0 25px 28px;
+		border: 1px solid rgb(231 231 231 / 1);
+	}
+}
+
+.program-goal-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@media #{$mobile-only} {
 		gap: 13px;
 		padding-block: 22px 19px;
 	}
 
-	.program-goal__item {
-		position: relative;
-		box-sizing: border-box;
-		margin: 0;
-		width: 30px;
-		height: 30px;
-		border: 1px solid rgb(205 205 205 / 1);
-		border-radius: 50%;
-	}
-
-	.program-goal__item::after {
-		content: "";
-		position: absolute;
-		inset: -1px;
-	}
-
-	.program-goal__item:checked::before {
-		content: "";
-		display: block;
-		background-image: url(".../.../icons/stack.svg#tick-radio");
-	}
-
-	.program-goal__item-label {
-		font-size: 16px;
-		line-height: 18px;
-		display: flex;
-		gap: 15px;
-		align-items: center;
-	}
-}
-
-@media #{$tablet-only} {
-	.program-goal {
-		padding: 25px 0 25px 28px;
-		margin: 0;
-		margin-left: 41px;
-		margin-right: 30px;
-		margin-bottom: 71px;
-		border: 1px solid rgb(231 231 231 / 1);
-	}
-
-	.program-goal-wrapper {
-		display: flex;
-		flex-direction: column;
+	@media #{$tablet-only} {
 		gap: 23px;
 	}
 
-	.program-goal__item-label {
-		font-size: 20px;
-		line-height: 30px;
-		display: flex;
-		gap: 20px;
-		align-items: center;
-	}
-
-	.program-goal__item {
-		position: relative;
-		box-sizing: border-box;
-		margin: 0;
-		width: 40px;
-		height: 40px;
-		border: 1px solid rgb(205 205 205 / 1);
-		border-radius: 50%;
-	}
-
-	.program-goal__item::after {
-		content: "";
-		position: absolute;
-		inset: -1px;
-	}
-
-	.program-goal__item:checked::before {
-		content: "";
-		display: block;
-		background-image: url(".../.../icons/stack.svg#tick-radio");
+	@media #{$desktop-only} {
+		gap: 18px;
 	}
 }
 
-@media #{$desktop-only} {
-	.program-goal {
-		padding: 25px 0 25px 28px;
-		border: 1px solid rgb(231 231 231 / 1);
-	}
+.program-goal__item {
+	appearance: none;
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid rgb(205 205 205 / 1);
+	border-radius: 50%;
 
-	.program-goal-wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: 18px;
-	}
-
-	.program-goal-wrapper-desktop {
-		margin: 0;
-		width: 100%;
-	}
-
-	.program-goal__item-label {
-		font-size: 20px;
-		line-height: 30px;
-		display: flex;
-		align-items: center;
-		gap: 20px;
-	}
-
-	.program-goal__item {
-		position: relative;
-		box-sizing: border-box;
-		margin: 0;
-		width: 40px;
-		height: 40px;
-		border: 1px solid rgb(205 205 205 / 1);
-		border-radius: 50%;
-	}
-
-	.program-goal__item::after {
+	&::after {
 		content: "";
 		position: absolute;
 		inset: -1px;
 	}
 
-	.program-goal__item:checked::before {
+	&:checked::before {
 		content: "";
 		display: block;
-		background-image: url(".../.../icons/stack.svg#tick-radio");
+		background-image: url("../../icons/stack.svg#tick-radio");
+
+		@media #{$mobile-only} {
+			width: 30px;
+			height: 30px;
+		}
+
+		@media #{$tablet-only} {
+			width: 40px;
+			height: 40px;
+		}
 	}
+}
+
+.program-goal__item-label {
+	font-size: 16px;
+	line-height: 18px;
+	display: flex;
+	gap: 15px;
+	align-items: center;
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 30px;
+		gap: 20px;
+	}
+}
+
+.program-goal-wrapper-desktop {
+	margin: 0;
+	width: 100%;
 }

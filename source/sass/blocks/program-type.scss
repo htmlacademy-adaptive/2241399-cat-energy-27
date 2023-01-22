@@ -1,218 +1,33 @@
 .program-type {
 	list-style-type: none;
 	padding: 0;
-}
 
-.program-type__card {
-	background-color: rgb(242 242 242);
-}
-
-@media #{$desktop-only} {
-	.program-type {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 80px;
-	}
-
-	.program-type__card {
-		width: 570px;
-		padding-block: 77px 55px;
-	}
-
-	.program-type__card-description {
-		padding-block: 73px 23px;
-		padding-inline: 52px;
-		margin: 0;
-		font-size: 16px;
-		line-height: 24px;
-		width: 457px;
-	}
-
-	.program-type__card-title {
-		font-size: 36px;
-		line-height: 36px;
-		padding-inline: 214px 20px;
-		width: fit-content;
-		position: relative;
-
-		--has-icon: "";
-		--circle-radius: calc(100% * 100 / 280);
-		--circle-color: var(--accent-color);
-		--icon-position: left;
-		--icon-size: 140px;
-		--icon-margin: -6px 9px 12px -8px;
-
-		&::before {
-			content: var(--has-icon, none);
-			display: block;
-			float: var(--icon-position);
-			block-size: var(--icon-size);
-			inline-size: var(--icon-size);
-			margin: var(--icon-margin);
-			background-image: var(--icon, var(--icon-a)), radial-gradient(var(--circle-color) calc(var(--circle-radius) - 0.5px), transparent calc(var(--circle-radius) + 0.5px));
-		}
-
-		&--slim {
-			--icon: url("/icons/stack.svg#tall-cat");
-		}
-
-		&--pro {
-			--icon: url("/icons/stack.svg#long-cat");
-		}
-	}
-
-	.program-type__card-button {
-		font-size: 20px;
-		line-height: 30px;
-		position: relative;
-		padding-left: 52px;
-
-		&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 32px;
-			height: 10px;
-			background-image: url("/icons/stack.svg#arrow");
-			left: 175px;
-			top: 10px;
-		}
-	}
-}
-
-@media #{$mobile-only} {
-	.program-type__card {
-		padding-block: 30px 18px;
-		margin: 20px 0;
-	}
-
-	.program-type__card-title {
-		padding-inline: 22px 20px;
-		width: fit-content;
-		font-size: 24px;
-		line-height: 36px;
-
-		--has-icon: "";
-		--circle-radius: calc(100% * 100 / 280);
-		--circle-color: var(--accent-color);
-		--icon-position: left;
-		--icon-size: 70px;
-		--icon-margin: -6px 9px 12px -8px;
-
-		&::before {
-			content: var(--has-icon, none);
-			display: block;
-			float: var(--icon-position);
-			block-size: var(--icon-size);
-			inline-size: var(--icon-size);
-			margin: var(--icon-margin);
-			background-image: var(--icon, var(--icon-a)), radial-gradient(var(--circle-color) calc(var(--circle-radius) - 0.5px), transparent calc(var(--circle-radius) + 0.5px));
-		}
-
-		&--slim {
-			--icon: url("/icons/stack.svg#tall-cat");
-		}
-
-		&--pro {
-			--icon: url("/icons/stack.svg#long-cat");
-		}
-	}
-
-	.program-type__card-description {
-		padding: 29px 33px 38px 20px;
-		margin: 0;
-		font-size: 14px;
-		line-height: 18px;
-	}
-
-	.program-type__card-button {
-		padding-left: 19px;
-		width: fit-content;
-		position: relative;
-		font-size: 16px;
-		line-height: 16px;
-
-		&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 32px;
-			height: 10px;
-			background-image: url("/icons/stack.svg#arrow");
-			left: 110px;
-			top: 7px;
-		}
-	}
-}
-
-@media #{$tablet-only} {
-	.program-type {
+	@media #{$tablet-only} {
 		display: grid;
 		gap: 30px;
 	}
 
-	.program-type__card {
-		padding-block: 77px 53px;
-		width: 708px;
+	@media #{$desktop-only} {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 80px;
+	}
+}
+
+.program-type__card {
+	background-color: rgb(242 242 242);
+
+	@media #{$mobile-only} {
+		padding: 30px 33px 18px 19px;
+		margin: 20px 0;
 	}
 
-	.program-type__card-title {
-		padding-inline: 53px 30px;
-		width: fit-content;
-		position: relative;
-		font-size: 36px;
-		line-height: 36px;
-
-		--has-icon: "";
-		--circle-radius: calc(100% * 100 / 280);
-		--circle-color: var(--accent-color);
-		--icon-position: left;
-		--icon-size: 280px;
-		--icon-margin: -6px 9px 12px -8px;
-
-		&::before {
-			content: var(--has-icon, none);
-			display: block;
-			float: var(--icon-position);
-			block-size: var(--icon-size);
-			inline-size: var(--icon-size);
-			margin: var(--icon-margin);
-			background-image: var(--icon, var(--icon-a)), radial-gradient(var(--circle-color) calc(var(--circle-radius) - 0.5px), transparent calc(var(--circle-radius) + 0.5px));
-		}
-
-		&--slim {
-			--icon: url("/icons/stack.svg#tall-cat");
-		}
-
-		&--pro {
-			--icon: url("/icons/stack.svg#long-cat");
-		}
+	@media #{$tablet-only} {
+		padding: 77px 62px 57px 52px;
 	}
 
-	.program-type__card-description {
-		padding: 24px 316px 52px 48px;
-		margin: 0;
-		font-size: 16px;
-		line-height: 24px;
-		width: 340px;
-	}
-
-	.program-type__card-button {
-		padding-left: 52px;
-		font-size: 20px;
-		line-height: 30px;
-		position: relative;
-
-		&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 32px;
-			height: 10px;
-			background-image: url("/icons/stack.svg#arrow");
-			left: 175px;
-			top: 10px;
-		}
+	@media #{$desktop-only} {
+		padding: 77px 61px 55px 51px;
 	}
 }
 
@@ -223,6 +38,48 @@
 	text-transform: uppercase;
 	text-align: center;
 	margin: 0;
+	position: relative;
+	width: fit-content;
+	font-size: 36px;
+	line-height: 36px;
+
+	--has-icon: "";
+	--circle-radius: calc(100% * 100 / 280);
+	--circle-color: var(--accent-color);
+	--icon-position: left;
+	--icon-margin: -6px 9px 12px -8px;
+
+	&::before {
+		content: var(--has-icon, none);
+		display: block;
+		float: var(--icon-position);
+		block-size: var(--icon-size);
+		inline-size: var(--icon-size);
+		margin: var(--icon-margin);
+		background-image: var(--icon, var(--icon-a)), radial-gradient(var(--circle-color) calc(var(--circle-radius) - 0.5px), transparent calc(var(--circle-radius) + 0.5px));
+	}
+
+	&--slim {
+		--icon: url("../../icons/stack.svg#tall-cat");
+	}
+
+	&--pro {
+		--icon: url("../../icons/stack.svg#long-cat");
+	}
+
+	@media #{$mobile-only} {
+		font-size: 24px;
+
+		--icon-size: 70px;
+	}
+
+	@media #{$desktop-only} {
+		--icon-size: 140px;
+	}
+
+	@media #{$tablet-only} {
+		--icon-size: 280px;
+	}
 }
 
 .program-type__card-description {
@@ -230,6 +87,24 @@
 	font-weight: 400;
 	text-align: left;
 	color: var(--main-color);
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+
+	@media #{$desktop-only} {
+		padding-block: 73px 23px;
+		width: 457px;
+	}
+
+	@media #{$mobile-only} {
+		padding-block: 29px 42px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	@media #{$tablet-only} {
+		padding-block: 24px 52px;
+	}
 }
 
 .program-type__card-button {
@@ -239,4 +114,41 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	color: rgb(0 0 0 / 1);
+	position: relative;
+	font-size: 20px;
+	line-height: 30px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 32px;
+		height: 10px;
+		background-image: url("/icons/stack.svg#arrow");
+		left: 175px;
+		top: 10px;
+	}
+
+	@media #{$mobile-only} {
+		padding-left: 19px;
+		width: fit-content;
+		font-size: 16px;
+		line-height: 16px;
+
+		&::before {
+			left: 110px;
+			top: 7px;
+		}
+	}
+
+	@media #{$not-mobile} {
+		padding-left: 52px;
+
+		&::before {
+			width: 32px;
+			height: 10px;
+			left: 175px;
+			top: 10px;
+		}
+	}
 }
