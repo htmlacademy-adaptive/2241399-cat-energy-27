@@ -4,8 +4,8 @@
 
 {% block main %}
 <main class="main-container">
-	<section class="catalog page__centerer">
-		<h1 class="catalog__title">Каталог продукции</h1>
+	<section class="catalog">
+		<h1 class="catalog__title page__centerer">Каталог продукции</h1>
 		<ul class="catalog__card-list">
 			<li class="catalog__card-item product-card">
 				<div class="product-card__wrapper">
@@ -24,14 +24,16 @@
 						<p class="product-card__description-item">Цена</p>
 						<p class="product-card__description-value">700 ₽</p>
 					</div>
-				</div>
 				<a class="product-card__button button" href="#">Заказать</a>
 
-			</li>
+				</div></li>
 			<li class="catalog__card-item product-card">
+				<div class="product-card__wrapper">
 				<a class="product-card__link" href="#">
 					<h3 class="product-card__label">Cat Energy PRO
 						1000 г</h3>
+				</a>
+					<a class="product-card__link-img" href="#">
 					{% include "templates/picture.twig" with {name: "products/2", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
 				</a>
 				<div class="product-card__description">
@@ -44,11 +46,13 @@
 				</div>
 				<a class="product-card__button button" href="#">Заказать</a>
 
-			</li>
+				</div></li>
 			<li class="catalog__card-item product-card">
+				<div class="product-card__wrapper">
 				<a class="product-card__link" href="#">
 					<h3 class="product-card__label">Cat Energy PRO
-						500 г</h3>
+						500 г</h3></a>
+				<a class="product-card__link-img" href="#">
 					{% include "templates/picture.twig" with {name: "products/3", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
 				</a>
 				<div class="product-card__description">
@@ -61,11 +65,13 @@
 				</div>
 				<a class="product-card__button button" href="#">Заказать</a>
 
-			</li>
+				</div></li>
 			<li class="catalog__card-item product-card">
+				<div class="product-card__wrapper">
 				<a class="product-card__link" href="#">
 					<h3 class="product-card__label">Cat Energy PRO
-						1000 г</h3>
+						1000 г</h3></a>
+						<a class="product-card__link-img" href="#">
 					{% include "templates/picture.twig" with {name: "products/4", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
 				</a>
 				<div class="product-card__description">
@@ -78,11 +84,13 @@
 				</div>
 				<a class="product-card__button button" href="#">Заказать</a>
 
-			</li>
+				</div></li>
 			<li class="catalog__card-item product-card">
+				<div class="product-card__wrapper">
 				<a class="product-card__link" href="#">
 					<h3 class="product-card__label">Cat Energy slim
-						500 г</h3>
+						500 г</h3></a>
+						<a class="product-card__link-img" href="#">
 					{% include "templates/picture.twig" with {name: "products/5", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
 				</a>
 				<div class="product-card__description">
@@ -95,11 +103,13 @@
 				</div>
 				<a class="product-card__button button" href="#">Заказать</a>
 
-			</li>
+				</div></li>
 			<li class="catalog__card-item product-card">
+				<div class="product-card__wrapper">
 				<a class="product-card__link" href="#">
 					<h3 class="product-card__label">Cat Energy slim
-						1000 г</h3>
+						1000 г</h3></a>
+						<a class="product-card__link-img" href="#">
 					{% include "templates/picture.twig" with {name: "products/6", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
 				</a>
 				<div class="product-card__description">
@@ -112,11 +122,13 @@
 				</div>
 				<a class="product-card__button button" href="#">Заказать</a>
 
-			</li>
+				</div></li>
 			<li class="catalog__card-item product-card">
+				<div class="product-card__wrapper">
 				<a class="product-card__link" href="#">
 					<h3 class="product-card__label">Cat Energy slim
-						500 г</h3>
+						500 г</h3></a>
+						<a class="product-card__link-img" href="#">
 					{% include "templates/picture.twig" with {name: "products/7", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
 				</a>
 				<div class="product-card__description">
@@ -129,14 +141,15 @@
 				</div>
 				<a class="product-card__button button" href="#">Заказать</a>
 
-			</li>
-			<li class="catalog__card-show-more">
-				<h3 class="catalog__card-show-more-label">Показать еще
+				</div></li>
+			<li class="catalog__card-item card-show-more">
+				<div class="card-show-more__wrapper">
+				<h3 class="card-show-more__label">Показать еще
 					100500 товаров</h3>
-				<p class="catalog__card-show-more-description">На самом деле вкусов
+				<p class="card-show-more__description">На самом деле вкусов
 					гораздо больше!</p>
-				<a class="catalog__card-show-more-button" aria-current="page" href="catalog.html">Показать все</a>
-			</li>
+				<a class="card-show-more__button" aria-current="page" href="catalog.html">Показать все</a>
+				</div></li>
 		</ul>
 	</section>
 	<section class="additional-catalog page__centerer">

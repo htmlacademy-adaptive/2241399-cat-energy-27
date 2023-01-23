@@ -12,7 +12,7 @@
 		display: block;
 		width: 27px;
 		height: 34px;
-		background-image: url("/icons/stack.svg#html-academy-logo");
+		background-image: url("../../icons/stack.svg#html-academy-logo");
 		left: 250px;
 		top: -7px;
 	}
@@ -20,6 +20,7 @@
 	@media #{$mobile-only} {
 		font-size: 16px;
 		line-height: 19px;
+		text-align: right;
 	}
 
 	@media #{$not-mobile} {

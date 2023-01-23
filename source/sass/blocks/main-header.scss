@@ -1,4 +1,10 @@
 .main-header {
+	@media #{$mobile-only} {
+		border-bottom: 1px solid #d9d9d9;
+	}
+}
+
+.main-header__wrapper {
 	@media #{$not-mobile} {
 		display: flex;
 		justify-content: space-between;

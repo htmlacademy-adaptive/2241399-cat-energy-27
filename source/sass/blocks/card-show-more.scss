@@ -1,0 +1,84 @@
+.card-show-more {
+	@media #{$mobile-only} {
+		padding-bottom: 25px;
+	}
+}
+
+.card-show-more__wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@media #{$mobile-only} {
+		margin: 0 30px;
+	}
+
+	@media #{$tablet-only} {
+		padding: 52px 36px 39px 36px;
+		border: 2px solid #f2f2f2;
+		align-items: center;
+	}
+}
+
+.card-show-more__label {
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+	color: rgb(17 17 17);
+	text-transform: uppercase;
+	position: relative;
+
+
+	&::before {
+		content: "";
+		display: block;
+		background: url("../../icons/stack.svg#plus");
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: -50px;
+		left: 125px;
+	}
+
+	@media #{$mobile-only} {
+		margin: 59px 0 8px 0;
+	}
+
+	@media #{$tablet-only} {
+		margin: 0;
+		margin-top: 111px;
+		width: 134px;
+	}
+}
+
+.card-show-more__description {
+	text-align: center;
+
+	@media #{$mobile-only} {
+		margin: 0 0 21px 0;
+	}
+
+	@media #{$tablet-only} {
+		margin: 23px 0 0 0;
+		width: 165px;
+	}
+}
+
+.card-show-more__button {
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+	background-color: rgb(242 242 242);
+	color: var(--main-color);
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 20px;
+
+	@media #{$tablet-only} {
+		padding-inline: 80px;
+		margin-top: 87px;
+	}
+}
