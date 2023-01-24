@@ -1,25 +1,25 @@
-<header class="main-header ">
+<header class="main-header {% if permalink == "index.html" %}main-header--has-no-separator{% endif %}">
 	<div class="main-header__wrapper page__centerer">
-	<a class="main-header__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
-		<picture>
-			<source media="(min-width: 1280px)" srcset="./img/logo.svg#logo-desktop" width="71" height="59">
-			<source media="(min-width: 768px)" srcset="./img/logo.svg#logo-tablet" width="61" height="51">
-			<img class="main-header__logo-mark" src="./img/logo.svg#logo-mobile" width="34" height="39" alt="Фирменный знак Cat Energy">
-		</picture>
-		<img class="main-header__logo-text" src="./img/logo.svg#logo-text" width="102" height="19" alt="Логотип Cat Energy">
-	</a>
-	<nav class="main-header__nav main-nav main-nav--nojs {% if permalink == "index.html" %}main-nav--with-background{% endif %}">
-		<button class="main-nav__toggle" type="button">
-			<span class="visually-hidden">Открыть меню</span>
-		</button>
-		<ul class="main-nav__list">
-			{% for page in pages %}
-			<li class="main-nav__item">
-				<a class="main-nav__link" href="{{page.path}}" {% if permalink == page.path %}aria-current="page"{% endif %}>
-					{{page.name}}
-				</a>
-			</li>
-			{% endfor %}
-		</ul>
-	</nav>
+		<a class="main-header__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+			<picture>
+				<source media="(min-width: 1280px)" srcset="./img/logo.svg#logo-desktop" width="71" height="59">
+				<source media="(min-width: 768px)" srcset="./img/logo.svg#logo-tablet" width="61" height="51">
+				<img class="main-header__logo-mark" src="./img/logo.svg#logo-mobile" width="34" height="39" alt="Фирменный знак Cat Energy">
+			</picture>
+			<img class="main-header__logo-text" src="./img/logo.svg#logo-text" width="102" height="19" alt="Логотип Cat Energy">
+		</a>
+		<nav class="main-header__nav main-nav main-nav--nojs {% if permalink == "index.html" %}main-nav--with-background{% endif %}">
+			<button class="main-nav__toggle" type="button">
+				<span class="visually-hidden">Открыть меню</span>
+			</button>
+			<ul class="main-nav__list">
+				{% for page in pages %}
+				<li class="main-nav__item">
+					<a class="main-nav__link" href="{{page.path}}" {% if permalink == page.path %}aria-current="page"{% endif %}>
+						{{page.name}}
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
 	</div></header>
