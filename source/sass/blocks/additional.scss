@@ -48,16 +48,6 @@
 	}
 }
 
-.additional__text {
-	text-align: center;
-
-	@media #{$mobile-only} {
-		padding-top: 21px;
-		padding-bottom: 32px;
-		margin-block: 0;
-	}
-}
-
 .additional__product-title {
 	@media #{$not-mobile} {
 		font-size: 20px;
