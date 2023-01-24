@@ -5,16 +5,14 @@
 {% block main %}
 <main class="main-container">
 	<section class="cat-energy-description">
-		<div class="cat-energy-description__wrapper">
-			<h1 class="cat-energy-description__title">
-				Функциональное<br>
-				питание для котов
-			</h1>
-			<p class="cat-energy-description__text">Занялся собой? Займись котом!</p>
-			<a class="cat-energy-description__button button page__centerer" href="form.html">Подобрать программу</a>
+		<div class="page__centerer cat-energy-description__container">
+			<div class="cat-energy-description__wrapper">
+				<h1 class="cat-energy-description__title">Функциональное питание для котов</h1>
+				<div class="cat-energy-description__text">Занялся собой? Займись котом!</div>
+				<a class="cat-energy-description__button button" href="form.html">подобрать программу</a>
+			</div>
+			{% include "templates/picture.twig" with {name: "can", class: "cat-energy-description__img", alt: "Корм Cat Energy Pro со вкусом курицы."} %}
 		</div>
-		<div class="cat-energy-description__img-wrapper">
-			{% include "templates/picture.twig" with {name: "can", class: "cat-energy-description__img", alt: "Корм Cat Energy Pro со вкусом курицы."} %} </div>
 	</section>
 	<ul class="program-type page__centerer">
 		<li class="program-type__card program-type__card--slim">
