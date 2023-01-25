@@ -200,7 +200,7 @@
 		opacity: 0.5;
 	}
 
-	&:disabled {
+	&:not([href]) {
 		opacity: 0.3;
 	}
 }

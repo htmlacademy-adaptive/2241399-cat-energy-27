@@ -10,7 +10,7 @@
 
 	@media #{$mobile-only} {
 		height: 290px;
-		padding: 186px 55px 43px;
+		padding: 2px 55px 43px;
 		box-sizing: border-box;
 		margin-bottom: 35px;
 	}
@@ -24,7 +24,7 @@
 
 	@media #{$desktop-only} {
 		height: 290px;
-		padding: 185px 43px 40px 43px;
+		padding: 0 43px 40px 43px;
 		box-sizing: border-box;
 	}
 }
@@ -41,19 +41,23 @@
 
 	&::before {
 		content: "";
-		position: absolute;
 		display: block;
 		width: 80px;
 		height: 80px;
-		top: -130px;
-		left: 40px;
 		background-image: url("../../icons/stack.svg#gift");
+	}
+
+	@media #{$mobile-only} {
+		&::before {
+			margin: 55px auto 45px auto;
+		}
 	}
 
 	@media #{$tablet-only} {
 		text-align: left;
 
 		&::before {
+			position: absolute;
 			top: -10px;
 			left: -320px;
 		}
@@ -61,8 +65,7 @@
 
 	@media #{$desktop-only} {
 		&::before {
-			top: -120px;
-			left: 55px;
+			margin: 55px auto 45px auto;
 		}
 	}
 }

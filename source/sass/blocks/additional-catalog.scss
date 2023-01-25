@@ -45,4 +45,8 @@
 		margin-block: 68px 80px;
 		padding-left: 36px;
 	}
+
+	@media #{$desktop-only} {
+		margin-block: 76px 81px;
+	}
 }
