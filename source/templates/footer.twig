@@ -1,25 +1,28 @@
 <footer class="main-footer">
 	<div class="main-footer__wrapper page__centerer">
-		<div class="main-footer__logo">
-			<a class="main-footer__logo-link" href="index.html">
-				<img class="main-footer__logo-text" src="./img/logo.svg#logo-text" alt="CAT ENERGY" width="128" height="24">
+		<div class="main-footer__logo logo">
+			<a class="logo__link" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+				<svg class="logo__text" width="128" height="24" role="img" aria-label="Логотип Cat Energy">
+					<use href="./img/logo.svg#logo-text" aria-hidden="true" />
+				</svg>
 			</a>
 		</div>
-		<div class="main-footer__social">
+		<div class="main-footer__social social">
 			<h2 class="visually-hidden">Социальные cети Кэт Энержи</h2>
-			<ul class="main-footer__social-list">
-				<li class="main-footer__social-item">
-					<a class="main-footer__social-link main-footer__social-link--vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконтакте</span>
+			<ul class="social__list">
+				<li class="social__item">
+					<a class="social__link social__link--icon_vk" href="https://vk.com/htmlacademy">
+						<span class="visually-hidden">Вконтакте</span>
 					</a>
 				</li>
-				<li class="main-footer__social-item">
-
-					<a class="main-footer__social-link main-footer__social-link--youtube" href="https://youtube.com/user/htmlacademyru"><span class="visually-hidden">YouTube</span>
+				<li class="social__item">
+					<a class="social__link social__link--icon_youtube" href="https://youtube.com/user/htmlacademyru">
+						<span class="visually-hidden">YouTube</span>
 					</a>
 				</li>
-				<li class="main-footer__social-item">
-
-					<a class="main-footer__social-link main-footer__social-link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span>
+				<li class="social__item">
+					<a class="social__link social__link--icon_telegram" href="https://t.me/htmlacademy">
+						<span class="visually-hidden">Телеграм</span>
 					</a>
 				</li>
 			</ul>

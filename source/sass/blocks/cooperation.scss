@@ -1,96 +1,16 @@
 .cooperation {
-	background-color: #ffffff;
+	display: grid;
+}
 
+.cooperation__adress {
 	@media #{$desktop-only} {
-		.cooperation {
-			position: relative;
-		}
-	}
-
-	@media #{$not-desktop} {
-		&--background {
-			background-color: #f2f2f2;
-		}
+		z-index: 1;
+		grid-area: 1 / 1 / 2 / 2;
 	}
 }
 
-.cooperation__title {
-	font-family: "Oswald", sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 20px;
-	text-align: left;
-	text-transform: uppercase;
-	color: rgb(17 17 17);
-	margin: 0;
-	width: 138px;
-
-	@media #{$tablet-only} {
-		width: 171px;
-		font-size: 20px;
-		line-height: 26px;
-	}
-
+.cooperation__adress-map {
 	@media #{$desktop-only} {
-		width: 163px;
-		font-size: 20px;
-		line-height: 26px;
-	}
-}
-
-
-.cooperation__adress-adress {
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 20px;
-	text-align: left;
-	margin: 0;
-	width: 140px;
-
-	@media #{$tablet-only} {
-		width: 160px;
-	}
-
-	@media #{$desktop-only} {
-		width: 155px;
-	}
-}
-
-.cooperation__adress-wrapper {
-	display: flex;
-	justify-content: space-between;
-
-	@media #{$mobile-only} {
-		padding-block: 26px;
-		gap: 2px;
-	}
-
-	@media #{$tablet-only} {
-		padding-block: 56px;
-		gap: 365px;
-		margin-inline: 40px;
-	}
-
-	@media #{$desktop-only} {
-		background-color: #ffffff;
-		position: absolute;
-		display: flex;
-		padding-block: 56px 47px;
-		gap: 87px;
-		padding-inline: 80px;
-		width: 405px;
-		margin: 0;
-		margin-top: 95px;
-		margin-left: 110px;
-	}
-}
-
-.cooperation--form-page {
-	background-color: rgb(242 242 242 / 1);
-
-	@media #{$tablet-only} {
-		width: 100%;
-		margin-inline: 0;
-		margin-top: 72px;
+		grid-area: 1 / 1 / 2 / 2;
 	}
 }

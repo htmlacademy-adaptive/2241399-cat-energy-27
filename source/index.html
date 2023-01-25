@@ -15,76 +15,70 @@
 		</div>
 	</section>
 	<ul class="program-type page__centerer">
-		<li class="program-type__card program-type__card--slim">
-			<h2 class="program-type__card-title program-type__card-title--slim">Похудение</h2>
-			<p class="program-type__card-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-			<a class="program-type__card-button" href="catalog.html">каталог slim</a>
+		<li class="program-type__card program-type__card--has_icon program-type__card--icon_slim">
+			<h2 class="program-type__title heading heading--lvl_3">Похудение</h2>
+			<p class="program-type__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+			<a class="program-type__link program-type__link--has-icon program-type__link--icon-arrow" href="catalog.html">каталог slim</a>
 		</li>
-		<li class="program-type__card program-type__card--pro">
-			<h2 class="program-type__card-title program-type__card-title--pro">Набор массы</h2>
-			<p class="program-type__card-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-			<a class="program-type__card-button" href="catalog.html">Каталог pro</a>
+		<li class="program-type__card program-type__card--has_icon program-type__card--icon_pro">
+			<h2 class="program-type__title heading heading--lvl_3">Набор массы</h2>
+			<p class="program-type__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+			<a class="program-type__link program-type__link--has-icon program-type__link--icon-arrow" href="catalog.html">Каталог pro</a>
 		</li>
 	</ul>
 	<section class="advantages page__centerer">
-		<h2 class="advantages__title">Как это работает</h2>
+		<h2 class="advantages__title heading heading--lvl_2">Как это работает</h2>
 		<ul class="advantages__list">
 			<li class="advantages__item advantages__item--icon-leaf">
-				Функциональное питание содержит только полезные питательные вещества.
+				<div>Функциональное питание содержит только полезные питательные вещества.</div>
 			</li>
-			<li class="advantages__item advantages__item--icon-pot">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+			<li class="advantages__item advantages__item--icon-pot">
+				<div>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</div>
 			</li>
 			<li class="advantages__item advantages__item--icon-cutlery">
-				Замените один-два приема обычной еды на наше функциональное питание.
+				<div>Замените один-два приема обычной еды на наше функциональное питание.</div>
 			</li>
 			<li class="advantages__item advantages__item--icon-alarm">
-				Уже через месяц наслаждайтесь изменениями к лучшему<span class="line-feed"></span> вашего питомца!
+				<div>Уже через месяц наслаждайтесь изменениями к лучшему<span class="line-feed"></span> вашего питомца!</div>
 			</li>
 		</ul>
 	</section>
 	<section class="example">
-		<h2 class="example__title page__centerer">Живой пример</h2>
-		<div class="example__main-wrapper">
-			<div class="example__wrapper page__centerer">
-				<div class="example__text-wrapper">
-					<p class="example__description">
-						Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-					</p>
-					<dl class="example__result-list">
-						<div class="example__result-item example__result-item--item">
-							<dt class="example__result-description example__result-description--item">Снижение веса</dt>
-							<dd class="example__result-number example__result-number--item">5 кг</dd>
-						</div>
-						<div class="example__result-item example__result-item--item">
-							<dt class="example__result-description example__result-description--item">Затрачено времени</dt>
-							<dd class="example__result-number example__result-number--item">60 дней</dd>
-						</div>
-						<div class="example__result-item example__result-item--total ">
-							<dt class="example__result-description example__result-description--total">Затраты на питание:</dt>
-							<dd class="example__result-number example__result-number--total">15 000 РУБ.</dd>
-						</div>
-					</dl>
+		<div class="example__container page__centerer">
+			<div class="example__text-wrapper">
+				<h2 class="example__title heading heading--lvl_2">Живой пример</h2>
+				<div class="example__description">
+					Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
 				</div>
-
-				<figure class="example__slider before-after-slider">
-					<figcaption class="before-after-slider__description visually-hidden">
-						Кот Борис до и после 2 месяцев питания кормом Cat Energy Slim.
-					</figcaption>
-					<div class="before-after-slider__wrapper slider" style="--curtain-place: 0.5;">
-						<div class="before-after-slider__image slider__image slider__image--state_before">
-							{% include "templates/picture.twig" with {name: "slide-before", class: "before-after-slider__image", alt: "Толстый кот до похудения."} %}
-						</div>
-						<div class="slider__curtain">
-							<button class="slider__thumb" type="button">
-								<span class="visually-hidden">Ползунок слайдера</span>
-							</button>
-						</div>
-						<div class="slider__after">
-							{% include "templates/picture.twig" with {name: "slide-after", class: "before-after-slider__image slider__image slider__image--state_after", alt: "Худой кот после похудения."} %}
-						</div>
+				<dl class="example__result-list">
+					<div class="example__result-item cartouche">
+						<dt class="example__result-key cartouche__key">Снижение веса</dt>
+						<dd class="example__result-value cartouche__value">5 кг</dd>
 					</div>
-				</figure>
+					<div class="example__result-item cartouche">
+						<dt class="example__result-key cartouche__key">Затрачено времени</dt>
+						<dd class="example__result-value cartouche__value">60 дней</dd>
+					</div>
+					<div class="example__result-item example__result-item--total ">
+						<dt class="example__result-key">Затраты на питание:</dt>
+						<dd class="example__result-value">15 000 РУБ.</dd>
+					</div>
+				</dl>
 			</div>
+			<figure class="example__compare compare">
+				<figcaption class="compare__description visually-hidden">
+					Кот Борис до и после 2 месяцев питания кормом Cat Energy Slim.
+				</figcaption>
+				<div class="compare__wrapper slider" style="--curtain-place: 0.5;">
+					{% include "templates/picture.twig" with {name: "slide-before", class: "compare__image slider__image slider__image--state_before", alt: "Толстый кот до похудения."} %}
+					<div class="slider__curtain">
+						<button class="slider__thumb" type="button">
+							<span class="visually-hidden">Ползунок слайдера</span>
+						</button>
+					</div>
+					{% include "templates/picture.twig" with {name: "slide-after", class: "compare__image slider__image slider__image--state_after", alt: "Худой кот после похудения."} %}
+				</div>
+			</figure>
 		</div>
 	</section>
 

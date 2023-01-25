@@ -1,17 +1,3 @@
-.before-after-slider {
-	margin: 0;
-	align-self: start;
-	justify-self: center;
-}
-
-.before-after-slider_wrapper {
-	margin: 0 auto;
-}
-
-.before-after-slider__image {
-	display: block;
-}
-
 .slider {
 	display: grid;
 	grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
@@ -21,6 +7,7 @@
 
 .slider__image {
 	display: block;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 
@@ -73,6 +60,6 @@
 		width: 100%;
 		height: 100%;
 		background-color: currentColor;
-		mask-image: url("../../icons/thumb.svg");
+		mask-image: url("../../icons/stack.svg#thumb");
 	}
 }

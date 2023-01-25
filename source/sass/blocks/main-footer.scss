@@ -1,132 +1,49 @@
 .main-footer {
 	background-color: rgb(242 242 242);
-	width: 100%;
 	position: sticky;
 	top: 100vh;
 }
 
-.main-footer__social-list {
-	display: flex;
-	list-style-type: none;
-	margin: 0;
-	justify-content: center;
-	gap: 24px;
-	align-items: center;
-	padding: 0;
+.main-footer__wrapper {
+	display: grid;
+	text-align: center;
+	padding-block: 20px;
 
-	@media #{$mobile-only} {
-		height: 63px;
-		border-top: 1px solid #e6e6e6;
-		border-bottom: 1px solid #e6e6e6;
-	}
-
-	@media #{$tablet-only} {
-		min-width: 132px;
+	@media #{$not-mobile} {
+		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
+		padding-block: 56px;
 	}
 
 	@media #{$desktop-only} {
-		min-width: 132px;
+		padding-block: 68px;
 	}
 }
 
-.main-footer__logo-text {
-	object-fit: fill;
-
+.main-footer__logo {
 	@media #{$mobile-only} {
-		padding: 39px 76px 32px 76px;
+		padding-block: 20px;
+		border-bottom: 1px solid #d9d9d9;
 	}
 
-	&:hover {
-		opacity: 0.8;
-	}
-
-	&:focus {
-		opacity: 0.8;
-	}
-
-	&:active {
-		opacity: 0.5;
-	}
-
-	&:disabled {
-		opacity: 0.3;
+	@media #{$not-mobile} {
+		justify-self: start;
 	}
 }
 
-.main-footer__logo-link {
+.main-footer__social {
 	@media #{$mobile-only} {
-		display: flex;
-		justify-content: center;
-	}
-}
-
-.main-footer__social-link {
-	cursor: pointer;
-	position: relative;
-
-	&--vk::after {
-		content: "";
-		display: block;
-		width: 28px;
-		height: 22px;
-		background-image: url("/icons/stack.svg#vk");
-	}
-
-	&--youtube::after {
-		content: "";
-		display: block;
-		width: 28px;
-		height: 22px;
-		background-image: url("/icons/stack.svg#youtube");
-	}
-
-	&--telegram::after {
-		content: "";
-		display: block;
-		width: 28px;
-		height: 22px;
-		background-image: url("/icons/stack.svg#telegram");
-	}
-
-	&:hover {
-		opacity: 0.8;
-	}
-
-	&:focus {
-		opacity: 0.8;
-	}
-
-	&:active {
-		opacity: 0.5;
-	}
-
-	&:disabled {
-		opacity: 0.3;
+		padding-block: 20px;
+		border-bottom: 1px solid #d9d9d9;
 	}
 }
 
 .main-footer__copyright {
 	@media #{$mobile-only} {
-		padding-block: 22px;
+		padding-block: 20px;
 	}
 
 	@media #{$not-mobile} {
-		display: flex;
-	}
-}
-
-.main-footer__wrapper {
-	@media #{$not-mobile} {
-		display: grid;
-		align-items: center;
-		grid-template-columns: 1fr 132px 1fr;
-	}
-
-	@media #{$tablet-only} {
-		padding-block: 55px;
-	}
-
-	@media #{$desktop-only} {
-		padding-block: 66px;
+		justify-self: end;
 	}
 }

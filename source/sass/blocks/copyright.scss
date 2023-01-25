@@ -1,62 +1,31 @@
 .copyright__link {
-	color: rgb(68 68 68 / 1);
 	font-family: "Lato", sans-serif;
-	font-weight: 400;
-	text-align: left;
+	color: #444444;
 	text-decoration: none;
-	position: relative;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+
+	@media #{$mobile-only} {
+		justify-content: space-between;
+	}
+
+	&:hover {
+		--icon-color: #68b738;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
 
 	&::after {
 		content: "";
 		display: block;
 		width: 27px;
 		height: 34px;
-		background-image: url("../../icons/stack.svg#html-academy-logo");
-		left: 250px;
-		top: -7px;
-	}
-
-	@media #{$mobile-only} {
-		display: contents;
-		font-size: 16px;
-		line-height: 19px;
-		text-align: right;
-	}
-
-	@media #{$not-mobile} {
-		text-align: right;
-
-		&::after {
-			left: 120px;
-			position: absolute;
-		}
-	}
-}
-
-.copyright {
-	@media #{$not-mobile} {
-		justify-content: end;
-		padding-right: 55px;
-	}
-
-	@media #{$mobile-only} {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	&:hover {
-		opacity: 0.8;
-	}
-
-	&:focus {
-		opacity: 0.8;
-	}
-
-	&:active {
-		opacity: 0.5;
-	}
-
-	&:disabled {
-		opacity: 0.3;
+		background: var(--icon-color, #666666);
+		mask: url("../../icons/stack.svg#html-academy-logo") no-repeat center / cover;
 	}
 }
