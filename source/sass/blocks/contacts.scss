@@ -83,7 +83,9 @@
 			z-index: 2;
 		}
 	}
+}
 
+.contacts__email:focus-visible + .contacts__icon {
 	&:focus {
 		&--email::before {
 			background-color: var(--acent-color);
