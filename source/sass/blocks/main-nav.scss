@@ -58,6 +58,30 @@
 		background-color: #000000;
 		mask: var(--toggle-icon, url("../../icons/stack.svg#cross")) no-repeat center / contain;
 	}
+
+	&:hover {
+		&::before {
+			background-color: rgb(0 0 0 / 0.8);
+		}
+	}
+
+	&:focus {
+		&::before {
+			background-color: rgb(0 0 0 / 0.8);
+		}
+	}
+
+	&:active {
+		&::before {
+			background-color: rgb(0 0 0 / 0.3);
+		}
+	}
+
+	&:disabled {
+		&::before {
+			background-color: rgb(0 0 0 / 0.2);
+		}
+	}
 }
 
 .main-nav__list {
@@ -162,5 +186,21 @@
 		height: 2px;
 		background: var(--accent-color);
 		background-color: var(--link-decor-color, #68b738);
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:focus {
+		opacity: 0.7;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+
+	&:disabled {
+		opacity: 0.3;
 	}
 }

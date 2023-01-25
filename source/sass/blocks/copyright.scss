@@ -43,4 +43,20 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:focus {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+
+	&:disabled {
+		opacity: 0.3;
+	}
 }

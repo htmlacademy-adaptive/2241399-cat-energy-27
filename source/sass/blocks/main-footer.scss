@@ -35,6 +35,22 @@
 	@media #{$mobile-only} {
 		padding: 39px 76px 32px 76px;
 	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:focus {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+
+	&:disabled {
+		opacity: 0.3;
+	}
 }
 
 .main-footer__logo-link {
@@ -70,6 +86,22 @@
 		width: 28px;
 		height: 22px;
 		background-image: url("/icons/stack.svg#telegram");
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:focus {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+
+	&:disabled {
+		opacity: 0.3;
 	}
 }
 

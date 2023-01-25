@@ -81,4 +81,22 @@
 		padding-inline: 80px;
 		margin-top: 87px;
 	}
+
+	&:hover {
+		background-color: #ebebeb;
+	}
+
+	&:focus {
+		background-color: #ebebeb;
+	}
+
+	&:active {
+		background-color: #ebebeb;
+		color: rgb(4 4 4 / 0.3);
+	}
+
+	&:disabled {
+		background-color: #ebebeb;
+		color: rgb(4 4 4 / 0.3);
+	}
 }

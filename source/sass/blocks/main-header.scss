@@ -43,19 +43,41 @@
 	@media #{$mobile-only} {
 		display: grid;
 		grid-template-columns: 1fr auto 1fr;
-		margin-block: 11px;
+		padding-block: 11px;
 	}
 
 	@media #{$not-mobile} {
 		align-self: flex-start;
 	}
+
+	&:hover {
+		opacity: 80%;
+	}
+
+	&:focus {
+		opacity: 80%;
+	}
+
+	&:active {
+		opacity: 60%;
+	}
+
+	&:disabled {
+		opacity: 20%;
+	}
 }
 
 .main-header__logo-text {
+	object-fit: fill;
+
 	@media #{$desktop-only} {
 		width: 118px;
 		height: 22px;
 	}
+}
+
+.main-header__logo-mark {
+	object-fit: fill;
 }
 
 .main-header__nav {

@@ -56,58 +56,51 @@
 }
 
 
-@media #{$mobile-only} {
-	.additional__product-control-input {
-		appearance: none;
-		position: relative;
-
-		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 30px;
-			height: 30px;
-			border: 1px solid rgb(205 205 205 / 1);
-			top: -20px;
-			left: -45px;
-		}
-
-		&:checked::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 30px;
-			height: 30px;
-			background-image: url("/icons/stack.svg#tick-checkbox");
-			top: -20px;
-			left: -45px;
-		}
-	}
-}
-
 .additional__product-control-input {
 	appearance: none;
 	position: relative;
 
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 40px;
+		height: 40px;
+		border: 1px solid rgb(205 205 205 / 1);
+	}
+
+	&:checked::after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-image: url("/icons/stack.svg#tick-checkbox");
+	}
+
+	@media #{$mobile-only} {
+		&::after {
+			top: -20px;
+			left: -45px;
+			width: 30px;
+			height: 30px;
+		}
+
+		&:checked::after {
+			top: -20px;
+			left: -45px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
 	@media #{$tablet-only} {
 		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 40px;
-			height: 40px;
-			border: 1px solid rgb(205 205 205 / 1);
 			top: -25px;
 			left: -65px;
 		}
 
 		&:checked::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 40px;
-			height: 40px;
-			background-image: url("/icons/stack.svg#tick-checkbox");
 			top: -25px;
 			left: -65px;
 		}
@@ -115,25 +108,23 @@
 
 	@media #{$desktop-only} {
 		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 40px;
-			height: 40px;
-			border: 1px solid rgb(205 205 205 / 1);
 			top: -25px;
 			left: -50px;
 		}
 
 		&:checked::after {
-			content: "";
-			position: absolute;
-			display: block;
-			width: 40px;
-			height: 40px;
-			background-image: url("/icons/stack.svg#tick-checkbox");
 			top: -25px;
 			left: -50px;
 		}
+	}
+
+	&:hover {
+		&::after {
+			border: 1px solid rgb(186 186 186 / 1);
+		}
+	}
+
+	&:disabled {
+		opacity: 0.3;
 	}
 }

@@ -12,8 +12,16 @@
 		background-color: rgb(94 170 47);
 	}
 
+	&:focus {
+		background-color: rgb(94 170 47);
+	}
+
 	&:active {
 		background-color: rgb(94 170 47);
 		color: rgb(255 255 255 / 0.3);
+	}
+
+	&:disabled {
+		background: rgb(255 255 255 / 0.3);
 	}
 }

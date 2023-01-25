@@ -24,11 +24,12 @@
 
 	@media #{$tablet-only} {
 		gap: 64px;
+		margin: 0;
+		margin-bottom: 72px;
 	}
 
 	@media #{$desktop-only} {
 		gap: 84px;
-		margin-left: 81px;
 		margin-bottom: 82px;
 	}
 }

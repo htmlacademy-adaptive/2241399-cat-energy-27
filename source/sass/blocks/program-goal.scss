@@ -7,7 +7,6 @@
 	color: rgb(34 34 34 / 1);
 	border: 0;
 	padding: 0;
-	margin: 0;
 
 	@media #{$mobile-only} {
 		gap: 18px;
@@ -18,15 +17,17 @@
 		margin-left: 41px;
 		margin-right: 30px;
 		margin-bottom: 71px;
+		border: 1px solid rgb(231 231 231 / 1);
+		padding: 25px 0 25px 0;
 	}
 
-	@media #{$not-mobile} {
-		padding: 25px 0 25px 28px;
+	@media #{$desktop-only} {
+		padding: 20px 0 20px 28px;
 		border: 1px solid rgb(231 231 231 / 1);
 	}
 }
 
-.program-goal-wrapper {
+.program-goal__wrapper {
 	display: flex;
 	flex-direction: column;
 
@@ -51,6 +52,8 @@
 	margin: 0;
 	border: 1px solid rgb(205 205 205 / 1);
 	border-radius: 50%;
+	width: 40px;
+	height: 40px;
 
 	&::after {
 		content: "";
@@ -58,22 +61,34 @@
 		inset: -1px;
 	}
 
-	&:checked::before {
+	&:checked::after {
 		content: "";
 		display: block;
 		background-image: url("../../icons/stack.svg#tick-radio");
+	}
 
-		@media #{$mobile-only} {
-			width: 30px;
-			height: 30px;
-		}
+	@media #{$mobile-only} {
+		width: 30px;
+		height: 30px;
 
-		@media #{$tablet-only} {
-			width: 40px;
-			height: 40px;
+		&::after {
+			inset: -6px;
 		}
 	}
+
+	&:hover {
+		border: 1px solid rgb(186 186 186 / 1);
+	}
+
+	&:focus {
+		border: 1px solid rgb(186 186 186 / 1);
+	}
+
+	&:disabled {
+		opacity: 0.3;
+	}
 }
+
 
 .program-goal__item-label {
 	font-size: 16px;
@@ -89,7 +104,9 @@
 	}
 }
 
-.program-goal-wrapper-desktop {
-	margin: 0;
-	width: 100%;
+.program-goal__wrapper-desktop {
+	@media #{$desktop-only} {
+		margin: 0;
+		width: 100%;
+	}
 }
