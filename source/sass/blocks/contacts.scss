@@ -31,79 +31,49 @@
 }
 
 .contacts__item {
+	position: relative;
 	display: flex;
 	gap: 20px;
 }
 
 .contacts__icon {
-	position: relative;
+	position: absolute;
+	z-index: 4000;
+	top: 14px;
+	right: 15px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #222222;
+	mask: var(--icon) no-repeat center / cover;
+	pointer-events: none;
 
-	&--email::before {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 20px;
-		height: 20px;
-		mask: url("../../icons/stack.svg#mail");
-		background-color: #222222;
-		top: 14px;
-		left: -50px;
+	@media #{$not-mobile} {
+		right: 18px;
 	}
 
-	&--phone::before {
-		content: "";
-		position: absolute;
-		display: block;
-		width: 20px;
-		height: 20px;
-		mask: url("../../icons/stack.svg#phone");
-		background-color: #222222;
-		top: 14px;
-		left: -50px;
+	&--email {
+		--icon: url("../../icons/stack.svg#mail");
 	}
 
-	@media #{$tablet-only} {
-		&--email::before {
-			left: -70px;
-		}
-
-		&--phone::before {
-			left: -70px;
-		}
+	&--phone {
+		--icon: url("../../icons/stack.svg#phone");
 	}
 
-	@media #{$desktop-only} {
-		&--email::before {
-			left: -60px;
-			z-index: 2;
-		}
-
-		&--phone::before {
-			left: -60px;
-			z-index: 2;
-		}
-	}
-}
-
-.contacts__email:focus-visible + .contacts__icon {
-	&:focus {
-		&--email::before {
-			background-color: var(--acent-color);
-		}
-
-		&--phone::before {
-			background-color: var(--acent-color);
-		}
+	.contacts__email:focus + & {
+		background-color: var(--acent-color);
 	}
 
-	&--error {
-		&--email::before {
-			background-color: #ff8282;
-		}
+	.contacts__email--error:not(:disabled) + & {
+		background-color: #ff8282;
+	}
 
-		&--phone::before {
-			background-color: #ff8282;
-		}
+	.contacts__phone:focus + & {
+		background-color: var(--acent-color);
+	}
+
+	.contacts__phone--error:not(:disabled) + & {
+		background-color: #ff8282;
 	}
 }
 
