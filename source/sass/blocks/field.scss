@@ -10,7 +10,6 @@
 	color: var(--main-color);
 	appearance: textfield;
 	box-sizing: border-box;
-	flex-grow: 1;
 
 	@media #{$mobile-only} {
 		padding: 14px 20px 13px 20px;

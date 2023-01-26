@@ -26,6 +26,8 @@
 }
 
 .comment__field {
+	resize: vertical;
+
 	@media #{$mobile-only} {
 		padding: 9px 12px 125px 15px;
 		height: 150px;
