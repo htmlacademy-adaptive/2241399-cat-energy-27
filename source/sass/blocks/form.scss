@@ -4,18 +4,18 @@
 	text-align: left;
 	color: rgb(0 0 0);
 	margin: 0;
-	padding: 27px 5px 37px 0;
 	font-size: 60px;
 	line-height: 60px;
 
 	@media #{$mobile-only} {
+		// padding: 27px 5px 37px 0;
 		font-size: 36px;
 		line-height: 36px;
 	}
 
 	@media #{$tablet-only} {
-		padding-block: 65px 54px;
-		padding-left: 39px;
+		// padding-block: 65px 54px;
+		padding-inline: 40px 36px;
 	}
 
 	@media #{$desktop-only} {
@@ -30,17 +30,21 @@
 	text-align: left;
 	color: rgb(0 0 0);
 	margin: 0;
-	padding-bottom: 39px;
-	padding-right: 10px;
 	width: 226px;
 	font-size: 14px;
 	line-height: 18px;
 
+	@media #{$mobile-only} {
+		padding-bottom: 39px;
+		padding-right: 10px;
+	}
+
 	@media #{$tablet-only} {
+		margin: 55px 0;
+		padding-left: 40px;
+		width: 323px;
 		font-size: 20px;
 		line-height: 30px;
-		width: 323px;
-		padding-left: 39px;
 	}
 
 	@media #{$desktop-only} {
