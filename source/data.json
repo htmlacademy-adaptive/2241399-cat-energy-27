@@ -31,12 +31,12 @@
 				},
 				{
 					"viewport": "tablet",
-					"width": 708,
+					"width": 768,
 					"height": 400
 				},
 				{
 					"viewport": "mobile",
-					"width": 280,
+					"width": 320,
 					"height": 362
 				}
 			]
