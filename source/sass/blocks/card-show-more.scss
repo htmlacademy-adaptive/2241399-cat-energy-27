@@ -62,18 +62,17 @@
 	align-self: start;
 	font-size: 12px;
 	line-height: 16px;
+	text-align: center;
 
 	@media #{$not-mobile} {
 		margin: 12px 0 0 0;
 		padding-inline: 36px;
 		font-size: 16px;
 		line-height: 18px;
-		text-align: center;
 	}
 
 	@media #{$desktop-only} {
 		padding-inline: 0;
-		// padding-block: 23px 87px;
 	}
 }
 
