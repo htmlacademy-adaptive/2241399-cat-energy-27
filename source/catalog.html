@@ -4,148 +4,132 @@
 
 {% block main %}
 <main class="main-container">
-	<section class="catalog">
-		<h1 class="catalog__title page__centerer">Каталог продукции</h1>
+	<section class="catalog page__centerer">
+		<h1 class="heading heading--lvl_1">Каталог продукции</h1>
 		<ul class="catalog__card-list">
 			<li class="catalog__card-item product-card">
-				<div class="product-card__wrapper">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO 500 г</h3>
-					</a>
-					<a class="product-card__link-img" href="#">
-						{% include "templates/picture.twig" with {name: "products/1", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Курица</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">700 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-				</div>
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO 500 г</h3>
+				</a>
+				<a class="product-card__link-img" href="#">
+					{% include "templates/picture.twig" with {name: "products/1", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
+				</a>
+				<dl class="product-card__description">
+					<dt class="product-card__description-key">Масса</dt>
+					<dd class="product-card__description-value">500 г</dd>
+					<dt class="product-card__description-key">Вкус</dt>
+					<dd class="product-card__description-value">Курица</dd>
+					<dt class="product-card__description-key">Цена</dt>
+					<dd class="product-card__description-value">700 ₽</dd>
+				</dl>
+				<a class="product-card__button button" href="#">Заказать</a>
 			</li>
 			<li class="catalog__card-item product-card">
-				<div class="product-card__wrapper">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO 1000 г</h3>
-					</a>
-					<a class="product-card__link-img" href="#">
-						{% include "templates/picture.twig" with {name: "products/2", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">1000 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Курица</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">1000 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-				</div>
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO 1000 г</h3>
+				</a>
+				<a class="product-card__link-img" href="#">
+					{% include "templates/picture.twig" with {name: "products/2", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
+				</a>
+				<dl class="product-card__description">
+					<dt class="product-card__description-key">Масса</dt>
+					<dd class="product-card__description-value">1000 г</dd>
+					<dt class="product-card__description-key">Вкус</dt>
+					<dd class="product-card__description-value">Курица</dd>
+					<dt class="product-card__description-key">Цена</dt>
+					<dd class="product-card__description-value">1000 ₽</dd>
+				</dl>
+				<a class="product-card__button button" href="#">Заказать</a>
 			</li>
 			<li class="catalog__card-item product-card">
-				<div class="product-card__wrapper">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO 500 г</h3>
-					</a>
-					<a class="product-card__link-img" href="#">
-						{% include "templates/picture.twig" with {name: "products/3", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Рыба</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">700 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-				</div>
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO 500 г</h3>
+				</a>
+				<a class="product-card__link-img" href="#">
+					{% include "templates/picture.twig" with {name: "products/3", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
+				</a>
+				<dl class="product-card__description">
+					<dt class="product-card__description-key">Масса</dt>
+					<dd class="product-card__description-value">500 г</dd>
+					<dt class="product-card__description-key">Вкус</dt>
+					<dd class="product-card__description-value">Рыба</dd>
+					<dt class="product-card__description-key">Цена</dt>
+					<dd class="product-card__description-value">700 ₽</dd>
+				</dl>
+				<a class="product-card__button button" href="#">Заказать</a>
 			</li>
 			<li class="catalog__card-item product-card">
-				<div class="product-card__wrapper">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy PRO 1000 г</h3>
-					</a>
-					<a class="product-card__link-img" href="#">
-						{% include "templates/picture.twig" with {name: "products/4", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">1000 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Рыба</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">1000 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-				</div>
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy PRO 1000 г</h3>
+				</a>
+				<a class="product-card__link-img" href="#">
+					{% include "templates/picture.twig" with {name: "products/4", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
+				</a>
+				<dl class="product-card__description">
+					<dt class="product-card__description-key">Масса</dt>
+					<dd class="product-card__description-value">1000 г</dd>
+					<dt class="product-card__description-key">Вкус</dt>
+					<dd class="product-card__description-value">Рыба</dd>
+					<dt class="product-card__description-key">Цена</dt>
+					<dd class="product-card__description-value">1000 ₽</dd>
+				</dl>
+				<a class="product-card__button button" href="#">Заказать</a>
 			</li>
 			<li class="catalog__card-item product-card">
-				<div class="product-card__wrapper">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy slim 500 г</h3>
-					</a>
-					<a class="product-card__link-img" href="#">
-						{% include "templates/picture.twig" with {name: "products/5", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Гречка</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">400 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-				</div>
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy slim 500 г</h3>
+				</a>
+				<a class="product-card__link-img" href="#">
+					{% include "templates/picture.twig" with {name: "products/5", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
+				</a>
+				<dl class="product-card__description">
+					<dt class="product-card__description-key">Масса</dt>
+					<dd class="product-card__description-value">500 г</dd>
+					<dt class="product-card__description-key">Вкус</dt>
+					<dd class="product-card__description-value">Гречка</dd>
+					<dt class="product-card__description-key">Цена</dt>
+					<dd class="product-card__description-value">400 ₽</dd>
+				</dl>
+				<a class="product-card__button button" href="#">Заказать</a>
 			</li>
 			<li class="catalog__card-item product-card">
-				<div class="product-card__wrapper">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy slim 1000 г</h3>
-					</a>
-					<a class="product-card__link-img" href="#">
-						{% include "templates/picture.twig" with {name: "products/6", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">1000 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Гречка</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">700 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-				</div>
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy slim 1000 г</h3>
+				</a>
+				<a class="product-card__link-img" href="#">
+					{% include "templates/picture.twig" with {name: "products/6", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
+				</a>
+				<dl class="product-card__description">
+					<dt class="product-card__description-key">Масса</dt>
+					<dd class="product-card__description-value">1000 г</dd>
+					<dt class="product-card__description-key">Вкус</dt>
+					<dd class="product-card__description-value">Гречка</dd>
+					<dt class="product-card__description-key">Цена</dt>
+					<dd class="product-card__description-value">700 ₽</dd>
+				</dl>
+				<a class="product-card__button button" href="#">Заказать</a>
 			</li>
 			<li class="catalog__card-item product-card">
-				<div class="product-card__wrapper">
-					<a class="product-card__link" href="#">
-						<h3 class="product-card__label">Cat Energy slim 500 г</h3>
-					</a>
-					<a class="product-card__link-img" href="#">
-						{% include "templates/picture.twig" with {name: "products/7", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
-					</a>
-					<div class="product-card__description">
-						<p class="product-card__description-item">Масса</p>
-						<p class="product-card__description-value">500 г</p>
-						<p class="product-card__description-item">Вкус</p>
-						<p class="product-card__description-value">Рис</p>
-						<p class="product-card__description-item">Цена</p>
-						<p class="product-card__description-value">500 ₽</p>
-					</div>
-					<a class="product-card__button button" href="#">Заказать</a>
-				</div>
+				<a class="product-card__link" href="#">
+					<h3 class="product-card__label">Cat Energy slim 500 г</h3>
+				</a>
+				<a class="product-card__link-img" href="#">
+					{% include "templates/picture.twig" with {name: "products/7", class: "product-card__img", alt: "Банка корма Cat Energy Pro."} %}
+				</a>
+				<dl class="product-card__description">
+					<dt class="product-card__description-key">Масса</dt>
+					<dd class="product-card__description-value">500 г</dd>
+					<dt class="product-card__description-key">Вкус</dt>
+					<dd class="product-card__description-value">Рис</dd>
+					<dt class="product-card__description-key">Цена</dt>
+					<dd class="product-card__description-value">500 ₽</dd>
+				</dl>
+				<a class="product-card__button button" href="#">Заказать</a>
 			</li>
 			<li class="catalog__card-item card-show-more">
-				<div class="card-show-more__wrapper">
-					<h3 class="card-show-more__label">Показать еще 100500 товаров</h3>
-					<p class="card-show-more__description">На самом деле вкусов гораздо больше!</p>
-					<a class="card-show-more__button" aria-current="page" href="catalog.html">Показать все</a>
-				</div>
+				<h3 class="card-show-more__label">Показать еще 100500 товаров</h3>
+				<div class="card-show-more__description">На самом деле вкусов гораздо больше!</div>
+				<a class="card-show-more__button" aria-current="page" href="catalog.html">Показать все</a>
 			</li>
 		</ul>
 	</section>
