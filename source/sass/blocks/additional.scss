@@ -10,20 +10,22 @@
 	color: rgb(0 0 0);
 	padding: 0;
 	margin: 0;
-	gap: 25px;
 
 	@media #{$mobile-only} {
-		padding-left: 46px;
+		padding-left: 37px;
+		gap: 24px;
 	}
 
 	@media #{$not-mobile} {
 		grid-template-columns: 50% 50%;
-		padding-left: 46px;
+		padding-left: 48px;
+		column-gap: 56px;
+		row-gap: 38px;
 	}
 
 	@media #{$desktop-only} {
 		grid-template-columns: repeat(4, 1fr);
-		gap: 80px;
+		gap: 120px;
 	}
 }
 
@@ -81,14 +83,14 @@
 	@media #{$mobile-only} {
 		&::after {
 			top: -20px;
-			left: -45px;
+			left: -40px;
 			width: 30px;
 			height: 30px;
 		}
 
 		&:checked::after {
 			top: -20px;
-			left: -45px;
+			left: -40px;
 			width: 30px;
 			height: 30px;
 		}
@@ -96,24 +98,24 @@
 
 	@media #{$tablet-only} {
 		&::after {
-			top: -25px;
-			left: -65px;
+			top: -27px;
+			left: -55px;
 		}
 
 		&:checked::after {
-			top: -25px;
-			left: -65px;
+			top: -27px;
+			left: -55px;
 		}
 	}
 
 	@media #{$desktop-only} {
 		&::after {
-			top: -25px;
+			top: -30px;
 			left: -50px;
 		}
 
 		&:checked::after {
-			top: -25px;
+			top: -30px;
 			left: -50px;
 		}
 	}

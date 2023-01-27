@@ -8,10 +8,11 @@
 	@media #{$mobile-only} {
 		border-bottom: 1px solid rgb(217 217 217 / 1);
 		padding-bottom: 24px;
+		row-gap: 14px;
 	}
 
 	@media #{$tablet-only} {
-		padding-bottom: 72px;
+		padding-bottom: 70px;
 	}
 
 	@media #{$desktop-only} {

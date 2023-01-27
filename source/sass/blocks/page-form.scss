@@ -27,6 +27,7 @@
 		gap: 64px;
 		margin: 0;
 		margin-bottom: 72px;
+		margin-left: 32px;
 	}
 
 	@media #{$desktop-only} {
@@ -47,13 +48,14 @@
 		min-width: 280px;
 		width: auto;
 		height: 40px;
+		font-size: 16px;
+		line-height: 20px;
 	}
 
 	@media #{$tablet-only} {
 		width: 282px;
 		height: 52px;
 		font-size: 20px;
-		font-weight: 400;
 	}
 
 	@media #{$desktop-only} {
@@ -68,7 +70,12 @@
 
 	@media #{$mobile-only} {
 		padding-top: 21px;
-		padding-bottom: 32px;
 		margin-block: 0;
+		padding-bottom: 29px;
+	}
+
+	@media #{$not-mobile} {
+		font-size: 16px;
+		line-height: 16px;
 	}
 }

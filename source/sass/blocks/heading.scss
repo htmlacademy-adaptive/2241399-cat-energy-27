@@ -4,7 +4,7 @@
 
 	&--lvl_1 {
 		@media #{$mobile-only} {
-			margin-block: 28px;
+			margin-block: 28px 37px;
 			font-size: 36px;
 			line-height: 36px;
 			color: #000000;
@@ -18,7 +18,7 @@
 		}
 
 		@media #{$desktop-only} {
-			margin-block: 18px;
+			margin-block: 20px;
 		}
 	}
 

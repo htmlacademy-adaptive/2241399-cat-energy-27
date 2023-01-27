@@ -14,9 +14,9 @@
 	}
 
 	@media #{$tablet-only} {
-		margin-left: 41px;
+		margin-left: 30px;
 		margin-right: 30px;
-		margin-bottom: 71px;
+		margin-bottom: 76px;
 		border: 1px solid rgb(231 231 231 / 1);
 		padding: 25px 0 25px 0;
 	}
@@ -37,11 +37,11 @@
 	}
 
 	@media #{$tablet-only} {
-		gap: 23px;
+		gap: 13px;
 	}
 
 	@media #{$desktop-only} {
-		gap: 18px;
+		gap: 15px;
 	}
 }
 
