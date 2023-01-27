@@ -1,34 +1,43 @@
 .promotion {
+	display: grid;
+	grid-template-rows: min-content;
+	place-items: start center;
+	gap: 32px;
 	color: rgb(255 255 255);
-	background: linear-gradient(
-		rgb(104 183 56 / 0.85),
-		rgb(104 183 56 / 0.85)
-	),
+	background:
+		linear-gradient(
+			rgb(104 183 56 / 0.85),
+			rgb(104 183 56 / 0.85)
+		),
 		var(--bg-image) no-repeat center / cover;
 
 	@include bg-image("bag-background");
 
 	@media #{$mobile-only} {
-		height: 290px;
-		padding: 2px 55px 43px;
-		box-sizing: border-box;
+		padding: 59px 58px 27px;
 		margin-bottom: 35px;
 	}
 
 	@media #{$tablet-only} {
-		height: 200px;
-		padding: 71px 124px 70px 422px;
-		box-sizing: border-box;
+		grid-template-columns: auto 165px;
+		justify-content: space-between;
+		padding-block: 55px 53px;
+		padding-inline: 77px 120px;
 		margin-bottom: 76px;
 	}
 
 	@media #{$desktop-only} {
-		height: 290px;
-		padding: 0 43px 40px 43px;
-		box-sizing: border-box;
+		padding: 56px 40px 29px;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		width: 80px;
+		height: 80px;
+		background-image: url("../../icons/stack.svg#gift");
 	}
 }
-
 
 .promotion__description {
 	font-family: "Lato", sans-serif;
@@ -39,33 +48,7 @@
 	font-size: 16px;
 	line-height: 20px;
 
-	&::before {
-		content: "";
-		display: block;
-		width: 80px;
-		height: 80px;
-		background-image: url("../../icons/stack.svg#gift");
-	}
-
-	@media #{$mobile-only} {
-		&::before {
-			margin: 55px auto 45px auto;
-		}
-	}
-
 	@media #{$tablet-only} {
 		text-align: left;
-
-		&::before {
-			position: absolute;
-			top: -10px;
-			left: -320px;
-		}
-	}
-
-	@media #{$desktop-only} {
-		&::before {
-			margin: 55px auto 45px auto;
-		}
 	}
 }
