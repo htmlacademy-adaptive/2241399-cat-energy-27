@@ -1,6 +1,10 @@
 .main-header {
 	position: relative;
 
+	@media #{$tablet-only} {
+		margin-top: -24px;
+	}
+
 	&--has-no-separator {
 		--has-separator: none;
 	}
